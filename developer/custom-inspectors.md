@@ -1,8 +1,6 @@
 # Custom inspectors
 
-💡 A custom inspector can provide better (customized) insights for your existing application.
-
-We recommend setting up a new project and use XR as a non-dev dependency. From there, you can easily add your own custom inspector.
+A custom inspector can provide better insights for your existing application, making the process easier to your users.
 
 ## XrInspectorInterface
 
@@ -75,7 +73,7 @@ if (!function_exists('my_xri')) {
     /**
      * Access XR inspector to send debug information.
      */
-    function my_xri(): XrInspectorInterface
+    function my_xri(): MyXrInspector
     {
         try {
             return XrInspectorInstance::get();
@@ -89,4 +87,10 @@ if (!function_exists('my_xri')) {
         }
     }
 }
+```
+
+Finally, use your helper:
+
+```php
+my_xri()->myMethod();
 ```
