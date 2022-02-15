@@ -1,6 +1,4 @@
-# XR
-
-## 🤗 Introduction
+# Introduction
 
 XR is a dump debug server utility for PHP. No extras required, debug your PHP code anywhere.
 

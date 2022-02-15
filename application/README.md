@@ -1,4 +1,4 @@
-# 🦄 Application
+# Application
 
 ## Start server application
 

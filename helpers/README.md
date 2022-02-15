@@ -1,4 +1,4 @@
-# 🐞 Helpers
+# Helpers
 
 XR provides three (3) helpers to conveniently debug your code:
 
