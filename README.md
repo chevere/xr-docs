@@ -3,8 +3,8 @@ home: true
 heroImage: /logo.svg
 heroText: XR
 tagline: Lightweight debug server utility for PHP.
-actionText: Get Started →
-actionLink: /get-started/
+actionText: Introduction →
+actionLink: /introduction/
 features:
 - title: Easy to use
   details: With a gorgeous minimalistic user interface.
