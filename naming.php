@@ -5,5 +5,5 @@ return [
     'configuration/' => '⚙️ Config',
     'application/' => '🦄 App',
     'helpers/' => '🐞 Helpers',
-    'developer/' => '👽 Dev',
+    'developer/' => '🛸 Dev',
 ];

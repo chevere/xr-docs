@@ -7,16 +7,16 @@ Here's an example for any PHP code:
 ```php
 xr('Hello, world!');
 
-xr(theArray: ['a' => 0, 'b' => 1], e: '🔴');
+xr(theArray: ['a' => 0, 'b' => 1], e: '📌');
 
 xr(🤭: 'wow', 👽: 'many', 😎: 'args');
 
 xr('This has topic', t: 'my-topic');
 ```
 
-Here's how that looks like in XR:
+Here's how it looks in XR debugger:
 
-`🚧 Missing picture`
+![intro](../src/app/intro.png)
 
 There are other helper functions that allow you to show system information, pause your code, etc. You can easily build your own dump functions tailored for your specific application context.
 

@@ -10,8 +10,12 @@ The `xri()` helper function. Use `xri` to interact with the inspector.
 xri()->pause(t:'hammer-time');
 ```
 
+When sending pause, you will be able to control execution from the debugger:
+
+![pause](../src/app/pause.png)
+
 ## Memory
 
 ```php
-xri()->memory(e:'🛎');
+xri()->memory();
 ```

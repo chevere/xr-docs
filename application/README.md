@@ -24,8 +24,19 @@ docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
 
 ## Demo
 
-Want to see a demo for XR? Open the debugger and then run:
+Open the debugger and then run:
 
+<code-group>
+<code-block title="🐘 PHP">
 ```php
 php vendor/chevere/xr/demo/demo.php
 ```
+</code-block>
+
+<code-block title="🐳 Docker">
+```php
+docker exec -it chevere-xr \
+    php demo/demo.php
+```
+</code-block>
+</code-group>
