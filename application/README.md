@@ -1,4 +1,4 @@
-# Application
+# 🦄 Application
 
 ## Start server application
 
@@ -7,13 +7,13 @@
 Run the following command to start the server at port `27420`:
 
 <code-group>
-<code-block title="🐘PHP">
+<code-block title="🐘 PHP">
 ```sh
 php vendor/chevere/xr/server.php -p 27420
 ```
 </code-block>
 
-<code-block title="🐳Docker">
+<code-block title="🐳 Docker">
 ```sh
 docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
 ```
