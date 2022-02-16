@@ -10,5 +10,5 @@ XR provides three helpers to conveniently debug your code:
 
 Additionally, the [chevere/var-dump](https://github.com/chevere/var-dump) dependency provides two extra dump helpers which write to the output stream:
 
-* VarDump [xd](xd.md)
-* VarDump and die [xdd](xdd.md)
+* VarDump [vd](vd.md)
+* VarDump and die [vdd](vdd.md)
