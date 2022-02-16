@@ -9,8 +9,9 @@ You can help with development by providing your time and care. XR is open for an
 You can help to build a bigger project by doing the following:
 
 * Engaging in [GitHub discussions](https://github.com/chevere/xr/discussions)
-* Mentioning Chevere to your friends or colleagues
+* Mentioning XR to your friends or colleagues
 * Writing about it (guides, blog posts, etc.)
+* Making videos showing others how to use it
 
 ## Contact
 
