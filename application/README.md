@@ -1,6 +1,6 @@
 # Application
 
-## Start server application
+## Start server
 
 💡 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
 

@@ -1,6 +1,8 @@
 <?php
 
 return [
-    'custom-inspectors.md',
-    'message-reference.md',
+    'README.md',
+    'docker-configuration.md',
+    'exception-handling.md',
+    'error-handling.md',
 ];

@@ -7,11 +7,9 @@ Here's an example for any PHP code:
 ```php
 xr('Hello, world!');
 
-xr(theArray: ['a' => 0, 'b' => 1], e: '📌');
+xr(theArray: ['a' => 0, 'b' => 1], t: 'my-topic', e: '📌');
 
 xr(🤭: 'wow', 👽: 'many', 😎: 'args');
-
-xr('This has topic', t: 'my-topic');
 ```
 
 Here's how it looks in XR debugger:
