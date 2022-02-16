@@ -5,6 +5,6 @@ return [
     'xr.md' => 'xr',
     'xrr.md' => 'xrr',
     'xri.md' => 'xri',
-    'xd.md' => 'xd',
-    'xdd.md' => 'xdd',
+    'vd.md' => 'vd',
+    'vdd.md' => 'vdd',
 ];
