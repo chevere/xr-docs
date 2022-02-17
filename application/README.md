@@ -2,8 +2,6 @@
 
 ## Start server
 
-💡 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
-
 Run the following command to start the server at port `27420`:
 
 <code-group>
@@ -21,6 +19,7 @@ docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
 </code-group>
 
 👉 The server will be available at [http://localhost:27420](http://localhost:27420) and ready to listen to any [helper function](../helpers/README.md).
+🐋 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
 
 ## Demo
 

@@ -2,11 +2,7 @@
 
 ## File-based
 
-💡 Optionally configure XR by creating a file named `xr.php` in your project root directory with the following options:
-
-::: tip
-We recommend adding `xr.php` to your .gitignore.
-:::
+💡 Configure XR by creating a file named `xr.php` in your project root directory with the following options:
 
 * `enable` `bool` - Controls sending messages to the server. Set `true` to enable, `false` to disable.
 * `host` `string` - The host where XR server is running.
@@ -24,9 +20,11 @@ return [
 ];
 ```
 
+> We recommend adding `xr.php` to your `.gitignore`.
+
 ## Code-based
 
-💡 If you want to handle XR settings somewhere within your existing application logic (not depend on the `xr.php` file) you can do:
+💡 If you want to handle XR settings somewhere within your existing application logic and not depend on the `xr.php` file:
 
 ```php
 use Chevere\Xr\XrInstance;

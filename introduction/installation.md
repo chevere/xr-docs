@@ -2,10 +2,6 @@
 
 ## System Requirements
 
-💡 Version specific XR system requirements can be found in the `composer.json` file.
-
-### PHP
-
 XR is built and tested for unix-like systems. It depends on `chevere/chevere` and it requires PHP.
 
 * [PHP 8](https://www.php.net/releases/8.0)
@@ -22,4 +18,4 @@ XR is built and tested for unix-like systems. It depends on `chevere/chevere` an
 composer require --dev chevere/xr
 ```
 
-Once installed, `xr()`, `xrr()` and `xri()` [helper functions](../helpers/README.md) will be available in the global namespace.
+Once installed, the [helper functions](../helpers/README.md) will be available in the global namespace.
