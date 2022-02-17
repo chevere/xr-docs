@@ -1,13 +1,14 @@
 # XR Inspector
 
-The `xri()` helper function. Use `xri` to interact with the inspector.
+Use `xri()` to interact with the inspector.
 
-💡 Supports [topic](#topic) `t`, [emote](#emote) `e` and [flags](#flags) `f` arguments **on methods**.
+💡 Supports topic `t`, emote `e` and flags `f` arguments **on methods**.
 
 ## Pause
 
 ```php
-xri()->pause(t:'hammer-time');
+xri()->pause();
+xri()->pause(t: 'stop', e: '⏯');
 ```
 
 When sending pause, you will be able to control execution from the debugger:
@@ -18,4 +19,5 @@ When sending pause, you will be able to control execution from the debugger:
 
 ```php
 xri()->memory();
+xri()->memory(f: XR_BACKTRACE);
 ```
