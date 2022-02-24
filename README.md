@@ -49,4 +49,4 @@ docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
 </code-block>
 </code-group>
 
-* Open [localhost:27420](http://localhost:27420) and profit
+Open [localhost:27420](http://localhost:27420) and profit.
