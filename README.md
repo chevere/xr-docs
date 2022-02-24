@@ -17,6 +17,10 @@ footer: Made by Rodolfo Berrios
 
 # Debug PHP anywhere
 
+<video width="100%" poster="./src/social/github.jpg" controls>
+    <source src="./src/video/cremino.mp4" type="video/mp4">
+</video>
+
 ## Step 1
 
 Install XR with [Composer](https://getcomposer.org/) in your codebase.
@@ -46,9 +50,3 @@ docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
 </code-group>
 
 * Open [localhost:27420](http://localhost:27420) and profit
-
-## Video demo
-
-<video width="100%" poster="./src/social/github.jpg" controls>
-    <source src="./src/video/cremino.mp4" type="video/mp4">
-</video>
