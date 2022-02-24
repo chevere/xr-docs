@@ -23,7 +23,7 @@ footer: Made by Rodolfo Berrios
 
 ## Step 1
 
-Install XR with [Composer](https://getcomposer.org/) in your codebase.
+Install XR in your codebase using [Composer](https://getcomposer.org/):
 
 ```sh
 composer require --dev chevere/xr
@@ -33,7 +33,7 @@ Once installed, the XR [helpers](helpers/README.md) will be ready to use.
 
 ## Step 2
 
-Run the XR application server:
+Run the XR [application](application/README.md) server:
 
 <code-group>
 <code-block title="🐘 PHP">
