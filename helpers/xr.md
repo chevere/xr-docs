@@ -1,6 +1,6 @@
 # XR
 
-The `xr()` helper function. Use `xr` to dump variables.
+Use `xr()` to dump variables.
 
 💡 Supports [topic](#topic) `t`, [emote](#emote) `e` and [flags](#flags) `f` arguments.
 

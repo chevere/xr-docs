@@ -22,4 +22,4 @@ There are other helper functions that allow you to show system information, paus
 
 💡 Calls to `xr()` in your code emit a message to the XR server.
 
-XR spawns an HTTP web application server (ReactPHP) with SSE to broadcast dump messages emited from your code.
+XR spawns an HTTP web application server (ReactPHP) with SSE to broadcast dump messages emitted from your code.
