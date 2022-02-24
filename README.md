@@ -49,6 +49,6 @@ docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
 
 ## Video demo
 
-<video width="100%" poster="./src/social/github.png" controls>
+<video width="100%" poster="./src/social/github.jpg" controls>
     <source src="./src/video/cremino.mp4" type="video/mp4">
 </video>
