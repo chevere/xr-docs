@@ -1,10 +1,10 @@
 # Helpers
 
-XR provides three helpers to conveniently debug your code:
+XR Debug provides three helpers to conveniently debug your code:
 
-* XR [xr](xr.md)
-* XR Raw [xrr](xrr.md)
-* XR Inspector [xri](xri.md)
+* XR Debug [xr](xr.md)
+* XR Debug Raw [xrr](xrr.md)
+* XR Debug Inspector [xri](xri.md)
 
 Additionally, the [chevere/var-dump](https://github.com/chevere/var-dump) dependency provides two extra dump helpers which write to the output stream:
 
@@ -13,4 +13,4 @@ Additionally, the [chevere/var-dump](https://github.com/chevere/var-dump) depend
 
 ## Custom helpers
 
-👉 Learn how to create your own [custom XR inspector](../developer/custom-inspectors.md).
+👉 Learn how to create your own [custom XR Debug inspector](../developer/custom-inspectors.md).

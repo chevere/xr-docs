@@ -1,6 +1,6 @@
 # Introduction
 
-XR is a dump debug server utility for PHP. No extras required, debug your PHP code anywhere.
+XR Debug is a dump debug utility for PHP. No extras required, debug your PHP code anywhere. It uses a ReactPHP SSE server to provide a web-based debug application.
 
 Here's an example for any PHP code:
 
@@ -12,7 +12,7 @@ xr(theArray: ['a' => 0, 'b' => 1], t: 'my-topic', e: '📌');
 xr(🤭: 'wow', 👽: 'many', 😎: 'args');
 ```
 
-Here's how it looks in XR debugger:
+Here's how it looks in XR Debug debugger:
 
 ![intro](../src/app/intro.png)
 
@@ -20,6 +20,6 @@ There are other helper functions that allow you to show system information, paus
 
 ## How it works?
 
-💡 Calls to `xr()` in your code emit a message to the XR server.
+💡 Calls to `xr()` in your code emit a message to the XR Debug server.
 
-XR spawns an HTTP web application server (ReactPHP) with SSE to broadcast dump messages emitted from your code.
+XR Debug spawns an HTTP web application server (ReactPHP) with SSE to broadcast dump messages emitted from your code.

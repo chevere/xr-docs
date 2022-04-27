@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'XR Docs',
+    title: 'XR Debug Docs',
     description: 'Lightweight debug server utility for PHP.',
     head: [
         ['link', {

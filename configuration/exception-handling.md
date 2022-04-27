@@ -2,7 +2,7 @@
 
 💡 XR's throwable handler can hook or replace your existing exception handler logic.
 
-Use `registerThrowableHandler` to enable XR throwable handling.
+Use `registerThrowableHandler` to enable XR Debug throwable handling.
 
 ```php
 

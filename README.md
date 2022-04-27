@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: /logo.svg
-heroText: XR debug
-tagline: Lightweight debug server utility for PHP.
+heroText: XR Debug
+tagline: Lightweight debug utility for PHP.
 actionText: Introduction →
 actionLink: /introduction/
 features:

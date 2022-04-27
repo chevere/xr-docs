@@ -35,7 +35,7 @@ final class MyXrInspector implements XrInspectorInterface
 
 ## XrInspectorNull
 
-💡 Use `XrInspectorNullTrait` to implement the `XrInspectorInterface` as a `null` inspector to void any inspection call if XR is disabled.
+💡 Use `XrInspectorNullTrait` to implement the `XrInspectorInterface` as a `null` inspector to void any inspection call if XR Debug is disabled.
 
 ```php
 <?php
@@ -71,7 +71,7 @@ use MyXrInspectorNull;
 
 if (!function_exists('my_xri')) {
     /**
-     * Access XR inspector to send debug information.
+     * Access XR Debug inspector to send debug information.
      */
     function my_xri(): MyXrInspector
     {

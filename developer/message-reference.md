@@ -1,6 +1,6 @@
 # Message reference
 
-The XR dump server can receive messages from anywhere:
+The XR Debug server can receive messages from anywhere:
 
 ```plain
 POST http://localhost:27420/message
