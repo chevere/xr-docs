@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'README.md' => 'Application',
+    'README.md' => 'Server',
     'docker.md' => 'Docker',
 ];

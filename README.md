@@ -6,8 +6,8 @@ tagline: Lightweight debug utility for PHP.
 actionText: Introduction →
 actionLink: /introduction/
 features:
-- title: 😘 Easy to use
-  details: With a gorgeous minimalistic user interface.
+- title: 😌 Easy to use
+  details: Full-featured with a gorgeous user interface.
 - title: 🍒 Portable & HTML based
   details: One-click server run. No extra dependencies.
 - title: 🦄 Beautiful
@@ -17,13 +17,15 @@ footer: Made by Rodolfo Berrios
 
 # Debug PHP anywhere
 
+XR Debug enables to remote debug your PHP code anywhere as it doesn't require any PHP extension requirement neither `php.ini` level settings. It runs under any PHP 8 codebase!
+
 <video width="100%" poster="./src/social/github.jpg" controls>
     <source src="./src/video/cremino.mp4" type="video/mp4">
 </video>
 
 ## Step 1
 
-Install XR in your codebase using [Composer](https://getcomposer.org/):
+Install XR Debug in your codebase using [Composer](https://getcomposer.org/):
 
 ```sh
 composer require --dev chevere/xr
@@ -33,7 +35,7 @@ Once installed, the XR [helpers](helpers/README.md) will be ready to use.
 
 ## Step 2
 
-Run the XR [application](application/README.md) server:
+Run the XR Debug [server](server/README.md):
 
 <code-group>
 <code-block title="🐘 PHP">

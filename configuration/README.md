@@ -1,12 +1,14 @@
-# Configuration
+# ⚙️ Configuration
 
 ## File-based
 
-💡 Configure XR Debug by creating a file named `xr.php` in your project root directory with the following options:
+Configure XR Debug by creating a file named `xr.php` in your project root directory with the following options:
 
-* `enable` `bool` - Controls sending messages to the server. Set `true` to enable, `false` to disable.
-* `host` `string` - The host where XR Debug server is running.
-* `port` `int` - The Port to connect to the `host`.
+| Property | Type   | Effect                                    |
+| -------- | ------ | ----------------------------------------- |
+| enable   | bool   | Controls sending messages to the server   |
+| host     | string | The host where XR Debug server is running |
+| port     | int    | The Port to connect to the `host`         |
 
 The following example is a `xr.php` file with default settings.
 
@@ -24,16 +26,16 @@ return [
 
 ## Code-based
 
-💡 If you want to handle XR Debug settings somewhere within your existing application logic and not depend on the `xr.php` file:
+If you want to handle XR Debug settings somewhere within your existing application logic and not depend on the `xr.php` file:
 
 ```php
 use Chevere\Xr\XrInstance;
 
-// (...) your logic sets $enable, $host and $port
+$host = 'host.docker.internal';
 new XrInstance(
     new Xr(
         enable: $enable,
-        host: $host:
+        host: $host,
         port: $port
     )
 );

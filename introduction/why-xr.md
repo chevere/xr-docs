@@ -22,7 +22,7 @@ Interact with the debugger to pause, resume, clear, copy and even export message
 
 *You'll never see better looking dumps!*
 
-We [built a new var dumper](https://github.com/chevere/var-dump) and it looks fantastic. Forget the ubiquitous `var-dumper` style without *any style*, your sight will be pleased as you will enjoy a more colorful *chevere* experience.
+We [built a new var dumper](https://chevere.org/packages/var-dump.html) and it looks fantastic. Forget the ubiquitous `var_dump` & `dd` style without *any style*, your sight will be pleased as you will enjoy a more colorful *chevere* experience.
 
 ## Context
 

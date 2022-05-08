@@ -6,7 +6,7 @@ XR Debug provides three helpers to conveniently debug your code:
 * XR Debug Raw [xrr](xrr.md)
 * XR Debug Inspector [xri](xri.md)
 
-Additionally, the [chevere/var-dump](https://github.com/chevere/var-dump) dependency provides two extra dump helpers which write to the output stream:
+Additionally, the [VarDump](https://chevere.org/packages/var-dump.html) package provides two extra dump helpers which write to the output stream:
 
 * VarDump [vd](vd.md)
 * VarDump and die [vdd](vdd.md)
