@@ -1,41 +1,52 @@
 # Application
 
-## Start server
+The application refers to the web server that provides the server layer for XR Debug. The repository is available at [GitHub](https://github.com/chevere/xr-server).
+
+👉 The server listen to any [helper function](../helpers/README.md).
+
+## Docker server
 
 Run the following command to start the server at port `27420`:
 
-<code-group>
-<code-block title="🐘 PHP">
 ```sh
-php vendor/chevere/xr/server.php -p 27420
+docker run --rm --init -i -p 27420:27420 \
+    --name chevere-xr ghcr.io/chevere/xr-server
 ```
-</code-block>
 
-<code-block title="🐳 Docker">
-```sh
-docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
-```
-</code-block>
-</code-group>
-
-👉 The server will be available at [http://localhost:27420](http://localhost:27420) and ready to listen to any [helper function](../helpers/README.md).
 🐋 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
+
+## Source server
+
+To run from source clone the repository:
+
+```sh
+git clone https://github.com/chevere/xr-server.git
+```
+
+Run the server at port `-p` `27420`:
+
+```sh
+./xrserver -p 27420
+```
+
+## Dependency server
+
+Install the server repository as a dependency for your project:
+
+```sh
+composer require --dev chevere/xr-server
+```
+
+Run the server at port `-p` `27420`:
+
+```sh
+vendor/bin/xrserver -p 27420
+```
 
 ## Demo
 
-Open the debugger and then run:
+Spawn the server, then run:
 
-<code-group>
-<code-block title="🐘 PHP">
 ```php
 php vendor/chevere/xr/demo/demo.php
 ```
-</code-block>
-
-<code-block title="🐳 Docker">
-```php
-docker exec -it chevere-xr \
-    php demo/demo.php
-```
-</code-block>
-</code-group>

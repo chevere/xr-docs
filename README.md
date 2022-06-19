@@ -15,38 +15,18 @@ features:
 footer: Made by Rodolfo Berrios
 ---
 
-# Debug PHP anywhere
+# Quick start
 
-<video width="100%" poster="./src/social/github.jpg" controls>
-    <source src="./src/video/cremino.mp4" type="video/mp4">
-</video>
-
-## Step 1
-
-Install XR in your codebase using [Composer](https://getcomposer.org/):
+* Install using [Composer](https://getcomposer.org/):
 
 ```sh
 composer require --dev chevere/xr
 ```
 
-Once installed, the XR [helpers](helpers/README.md) will be ready to use.
+* Once installed the XR [helpers](helpers/README.md) will be ready to use.
+* Run the XR [application](application/README.md) server.
+* Open [localhost:27420](http://localhost:27420) and profit.
 
-## Step 2
-
-Run the XR [application](application/README.md) server:
-
-<code-group>
-<code-block title="🐘 PHP">
-```sh
-php vendor/chevere/xr/server.php -p 27420
-```
-</code-block>
-
-<code-block title="🐳 Docker">
-```sh
-docker run -d -p 27420:27420 --name chevere-xr ghcr.io/chevere/xr
-```
-</code-block>
-</code-group>
-
-Open [localhost:27420](http://localhost:27420) and profit.
+<video width="100%" poster="./src/social/github.jpg" controls>
+    <source src="./src/video/cremino.mp4" type="video/mp4">
+</video>
