@@ -9,8 +9,6 @@ XR Debug is built and tested for unix-like systems. It depends on `chevere/cheve
 
 ## Installing
 
-`🚧 As 0.2 XR Debug includes client and server in the same package. This will change in the future.`
-
 * Requires [Composer](https://getcomposer.org/)
 * Add `chevere/xr` as a dev dependency in your project:
 
@@ -19,3 +17,5 @@ composer require --dev chevere/xr
 ```
 
 Once installed, the [helper functions](../helpers/README.md) will be available in the global namespace.
+
+💡 Refer to [Server](../server/README.md) for instructions in how to provide the XR Debug server.
