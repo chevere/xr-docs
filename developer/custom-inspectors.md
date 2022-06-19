@@ -1,8 +1,12 @@
 # Custom inspectors
 
-A custom inspector can provide better insights for your existing application, making the process easier to your users.
+An inspector is a class implementing `Chevere\Xr\Interfaces\XrInspectorInterface` and it can be used provide better insights for your existing application, making the process easier to your users.
 
-## XrInspectorInterface
+## Inspector interface
+
+This interface is in charge of defining a standard XR Debug inspector and in concrete classes you can freely add any method(s) for stream messages by using the `sendMessage` method.
+
+### Inspector sample
 
 💡 Use `XrInspectorTrait` to implement the `XrInspectorInterface`.
 
@@ -16,12 +20,12 @@ final class MyXrInspector implements XrInspectorInterface
 {
     use XrInspectorTrait;
 
-    public function myMethod(
+    public function myQueries(
         string $t = '',
         string $e = '',
         int $f = 0,
     ): void {
-        $data = '{my data}';
+        $data = 'my queries from somewhere...';
         $this->sendMessage(
             body: $data,
             topic: $t,
@@ -30,12 +34,22 @@ final class MyXrInspector implements XrInspectorInterface
         );
     }
 }
-
 ```
 
-## XrInspectorNull
+For code code above, `myQueries` defines an method inspector that will stream queries from your application. To pass queries in this context you could use a static call, or create an object to collect that and make it visible to `MyXrInspector`.
 
-💡 Use `XrInspectorNullTrait` to implement the `XrInspectorInterface` as a `null` inspector to void any inspection call if XR Debug is disabled.
+### Notes on parameters
+
+* Define topic `$t`, emote `$e` and flag `$f` in your parameters so your inspector adheres to XR Debug functionality.
+* Use docblock to document your parameters, it will be easy for your users.
+
+## Null inspector
+
+A null inspector is required to void any inspection call **if XR Debug is disabled**. The null inspector should implement the same methods as the real inspector, but without carrying any action.
+
+### Null inspector sample
+
+💡 Use `XrInspectorNullTrait` to implement the `XrInspectorInterface`.
 
 ```php
 <?php
@@ -47,20 +61,26 @@ final class MyXrInspectorNull implements XrInspectorInterface
 {
     use XrInspectorNullTrait;
 
-    public function myMethod(
+    public function myQueries(
         string $t = '',
         string $e = '',
         int $f = 0,
     ): void {
     }
 }
-
-
 ```
 
-## Helper function
+### Design recommendation
 
-Register your custom helper function:
+Copy the real inspector once you done and remove the body from the methods. Don't worry in designing the null inspector at the same time the real thing.
+
+## Helper functions
+
+For each inspector you will want to create a helper function to easily access to it.
+
+### Helper function sample
+
+💡 This helper function is special as if XR Debug is disabled it will use the [null inspector](#null-inspector), voiding any variable introspection.
 
 ```php
 use Chevere\Xr\Inspector\XrInspectorInstance;
@@ -69,28 +89,26 @@ use LogicException;
 use MyXrInspector;
 use MyXrInspectorNull;
 
-if (!function_exists('my_xri')) {
-    /**
-     * Access XR Debug inspector to send debug information.
-     */
-    function my_xri(): MyXrInspector
-    {
-        try {
-            return XrInspectorInstance::get();
-        } catch (LogicException) {
-            $xrInspector = getXr()->enable()
-                ? MyXrInspector::class
-                : MyXrInspectorNull::class;
-            $xrInspector = new $xrInspector(getXr()->client());
+/**
+ * Access to my custom XR Debug inspector
+ */
+function my_xri(): MyXrInspector
+{
+    try {
+        return XrInspectorInstance::get();
+    } catch (LogicException) {
+        $xrInspector = getXr()->enable()
+            ? MyXrInspector::class
+            : MyXrInspectorNull::class;
+        $xrInspector = new $xrInspector(getXr()->client());
 
-            return (new XrInspectorInstance($xrInspector))::get();
-        }
+        return (new XrInspectorInstance($xrInspector))::get();
     }
 }
 ```
 
-Finally, use your helper:
+Finally, to use your helper:
 
 ```php
-my_xri()->myMethod();
+my_xri()->myQueries();
 ```

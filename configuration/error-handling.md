@@ -1,14 +1,16 @@
 # Error handling
 
-You will require to handle errors as exceptions and from there use [Exception handling](exception-handling.md).
+To handle errors with XR Debug you will require to configure your project to handle errors as exceptions:
 
 ```php
 use Chevere\ThrowableHandler\ThrowableHandler;
 
 set_error_handler(
-    ThrowableHandler::ERRORS_AS_EXCEPTIONS
+    ThrowableHandler::ERROR_AS_EXCEPTION
 );
 register_shutdown_function(
-    ThrowableHandler::FATAL_ERROR_HANDLER
+    ThrowableHandler::SHUTDOWN_ERROR_AS_EXCEPTION
 );
 ```
+
+Once done, refer to [Exception handling](exception-handling.md).

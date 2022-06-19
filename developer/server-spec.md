@@ -1,6 +1,12 @@
-# Message reference
+---
+sidebar: false
+---
 
-The XR Debug server can receive messages from anywhere:
+# Server spec
+
+`🚧 work in progress`
+
+The XR Debug server spec defines a web service standard compatible with all the client libraries following the XR Debug interface. This enables to create custom compatible server implementation for using with XR Debug.
 
 ```plain
 POST http://localhost:27420/message

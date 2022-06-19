@@ -1,8 +1,8 @@
-# Application
+# 🦄 Server
 
-The application refers to the web server that provides the server layer for XR Debug. The repository is available at [GitHub](https://github.com/chevere/xr-server).
+The XR Debug server is the layer charge of receive and stream the debug messages. The XR Debug server can spawn from your project folder, [Docker](docker.md) and even from a [third-party server](../developer/server-spec.md).
 
-👉 The server listen to any [helper function](../helpers/README.md).
+The repository source is available at [GitHub](https://github.com/chevere/xr-server).
 
 ## Docker server
 

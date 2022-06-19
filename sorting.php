@@ -4,7 +4,7 @@ return [
     'README.md',
     'introduction/',
     'configuration/',
-    'application/',
+    'server/',
     'helpers/',
     'developer/',
 ];
