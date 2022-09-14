@@ -36,7 +36,7 @@ final class MyXrInspector implements XrInspectorInterface
 }
 ```
 
-For code code above, `myQueries` defines an method inspector that will stream queries from your application. To pass queries in this context you could use a static call, or create an object to collect that and make it visible to `MyXrInspector`.
+For code above, `myQueries` defines an method inspector that will stream queries from your application. To pass queries in this context you could use a static call, or create an object to collect that and make it visible to `MyXrInspector`.
 
 ### Notes on parameters
 
