@@ -4,6 +4,19 @@ The XR Debug server is the layer charge of receive and stream the debug messages
 
 The repository source is available at [GitHub](https://github.com/chevere/xr-server).
 
+## Command
+
+```sh
+./xrserver <options>
+```
+
+| Option | Explain                       |
+| ------ | ----------------------------- |
+| -p     | Port                          |
+| -c     | Cert file for TLS             |
+| -e     | Enable end-to-end encryption  |
+| -k     | Symmetric key (for -e option) |
+
 ## Docker server
 
 Run the following command to start the server at port `27420`:
