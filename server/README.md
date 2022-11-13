@@ -7,15 +7,17 @@ The repository source is available at [GitHub](https://github.com/chevere/xr-ser
 ## Command
 
 ```sh
-./xrserver <options>
+./xr <options>
 ```
 
 | Option | Explain                       |
 | ------ | ----------------------------- |
 | -p     | Port                          |
-| -c     | Cert file for TLS             |
 | -e     | Enable end-to-end encryption  |
 | -k     | Symmetric key (for -e option) |
+| -v     | Enable sign verification      |
+| -s     | Private key (for -v option)   |
+| -c     | Cert file for TLS             |
 
 ## Docker server
 
@@ -39,7 +41,7 @@ git clone https://github.com/chevere/xr-server.git
 Run the server at port `-p` `27420`:
 
 ```sh
-./xrserver -p 27420
+./xr -p 27420
 ```
 
 ## Dependency server
@@ -53,7 +55,7 @@ composer require --dev chevere/xr-server
 Run the server at port `-p` `27420`:
 
 ```sh
-vendor/bin/xrserver -p 27420
+vendor/bin/xr -p 27420
 ```
 
 ## Demo

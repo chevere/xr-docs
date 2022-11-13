@@ -27,7 +27,7 @@ composer require --dev chevere/xr
 * Run the XR application [server](server/README.md)
 
 ```sh
-vendor/bin/xrserver
+vendor/bin/xr
 ```
 
 * Open [localhost:27420](http://localhost:27420) and profit
