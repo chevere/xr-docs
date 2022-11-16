@@ -9,6 +9,7 @@ Configure XR Debug by creating a file named `xr.php` in your project root direct
 | enable   | bool   | Controls sending messages to the server   |
 | host     | string | The host where XR Debug server is running |
 | port     | int    | The Port to connect to the `host`         |
+| key      | string | Private key                               |
 
 The following example is a `xr.php` file with default settings.
 
@@ -19,6 +20,7 @@ return [
     'enable' => true,
     'host' => 'localhost',
     'port' => 27420,
+    'key' => '',
 ];
 ```
 
@@ -32,12 +34,16 @@ If you want to handle XR Debug settings somewhere within your existing applicati
 use Chevere\Xr\Xr;
 use Chevere\Xr\XrInstance;
 
+$enable = true;
 $host = 'localhost';
+$port = 27420;
+$key = file_get_contents('private.key');
 new XrInstance(
     new Xr(
         enable: $enable,
         host: $host,
-        port: $port
+        port: $port,
+        key: $key
     )
 );
 ```

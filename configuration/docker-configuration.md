@@ -2,7 +2,7 @@
 
 When using Docker (local) the host [config](README.md) should point to the internal IP of your Docker host by using `host.docker.internal`.
 
-💡 Implement this when needing to debug code emitted by applications running in containers.
+💡 Implement this when needing to debug code emitted by applications running in local containers.
 
 ## File-based
 
@@ -21,12 +21,10 @@ return [
 use Chevere\Xr\Xr;
 use Chevere\Xr\XrInstance;
 
-$host = 'host.docker.internal';
 new XrInstance(
     new Xr(
-        enable: $enable,
-        host: $host,
-        port: $port
+        // ...
+        host: 'host.docker.internal',
     )
 );
 ```
