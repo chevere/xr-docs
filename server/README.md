@@ -19,13 +19,31 @@ The repository source is available at [GitHub](https://github.com/chevere/xr-ser
 | -s     | Private key (for -v option)   |
 | -c     | Cert file for TLS             |
 
+## Dependency server
+
+💡 If you installed `chevere/xr` the dependency server is already included.
+
+Install the server repository as a dependency for your project:
+
+```sh
+composer require --dev chevere/xr-server
+```
+
+Run the server:
+
+```sh
+vendor/bin/xr
+```
+
 ## Docker server
 
 Run the following command to start the server at port `27420`:
 
 ```sh
-docker run --rm --init -i -p 27420:27420 \
-    --name chevere-xr ghcr.io/chevere/xr-server
+docker run \
+    --pull=always --rm --init \
+    -i -p 27420:27420 \
+    ghcr.io/chevere/xr-server:latest
 ```
 
 🐋 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
@@ -38,24 +56,10 @@ To run from source clone the repository:
 git clone https://github.com/chevere/xr-server.git
 ```
 
-Run the server at port `-p` `27420`:
+Run the server:
 
 ```sh
-./xr -p 27420
-```
-
-## Dependency server
-
-Install the server repository as a dependency for your project:
-
-```sh
-composer require --dev chevere/xr-server
-```
-
-Run the server at port `-p` `27420`:
-
-```sh
-vendor/bin/xr -p 27420
+./xr
 ```
 
 ## Demo
