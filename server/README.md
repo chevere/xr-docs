@@ -4,6 +4,21 @@ The XR Debug server is the layer charge of receive and stream the debug messages
 
 The repository source is available at [GitHub](https://github.com/chevere/xr-server).
 
+## Command
+
+```sh
+./xr <options>
+```
+
+| Option | Explain                       |
+| ------ | ----------------------------- |
+| -p     | Port                          |
+| -e     | Enable end-to-end encryption  |
+| -k     | Symmetric key (for -e option) |
+| -v     | Enable sign verification      |
+| -s     | Private key (for -v option)   |
+| -c     | Cert file for TLS             |
+
 ## Docker server
 
 Run the following command to start the server at port `27420`:
@@ -26,7 +41,7 @@ git clone https://github.com/chevere/xr-server.git
 Run the server at port `-p` `27420`:
 
 ```sh
-./xrserver -p 27420
+./xr -p 27420
 ```
 
 ## Dependency server
@@ -40,7 +55,7 @@ composer require --dev chevere/xr-server
 Run the server at port `-p` `27420`:
 
 ```sh
-vendor/bin/xrserver -p 27420
+vendor/bin/xr -p 27420
 ```
 
 ## Demo
