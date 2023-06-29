@@ -12,6 +12,12 @@ To run from source clone the repository:
 git clone https://github.com/chevere/xr-server.git
 ```
 
+Then install dependencies using Composer:
+
+```sh
+composer install
+```
+
 Run the server:
 
 ```sh
@@ -20,7 +26,7 @@ Run the server:
 
 ## Dependency server
 
-Install the server repository as a dependency for your project:
+Install the server repository as a dependency for your project using Composer:
 
 ```sh
 composer require --dev chevere/xr-server
