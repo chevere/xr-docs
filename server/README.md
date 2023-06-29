@@ -4,24 +4,21 @@ The XR Debug server is the layer charge of receive and stream the debug messages
 
 The repository source is available at [GitHub](https://github.com/chevere/xr-server).
 
-## Command
+## Source server
+
+To run from source clone the repository:
 
 ```sh
-./xr <options>
+git clone https://github.com/chevere/xr-server.git
 ```
 
-| Option | Explain                       |
-| ------ | ----------------------------- |
-| -p     | Port                          |
-| -e     | Enable end-to-end encryption  |
-| -k     | Symmetric key (for -e option) |
-| -v     | Enable sign verification      |
-| -s     | Private key (for -v option)   |
-| -c     | Cert file for TLS             |
+Run the server:
+
+```sh
+./xr
+```
 
 ## Dependency server
-
-💡 If you installed `chevere/xr` the dependency server is already included.
 
 Install the server repository as a dependency for your project:
 
@@ -48,23 +45,24 @@ docker run \
 
 🐋 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
 
-## Source server
-
-To run from source clone the repository:
+## Server options
 
 ```sh
-git clone https://github.com/chevere/xr-server.git
+./xr <options>
 ```
 
-Run the server:
-
-```sh
-./xr
-```
+| Option | Description                    |
+| ------ | ------------------------------ |
+| -p     | Port                           |
+| -e     | Enable end-to-end encryption   |
+| -k     | Symmetric key (to use with -e) |
+| -v     | Enable sign verification       |
+| -s     | Private key (to use with -v)   |
+| -c     | Cert file for TLS              |
 
 ## Demo
 
-Spawn the server, then run:
+Spawn the server then run:
 
 ```php
 php vendor/chevere/xr/demo/demo.php
