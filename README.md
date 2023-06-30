@@ -23,14 +23,14 @@ footer: Made by Rodolfo Berrios
 composer require --dev chevere/xr
 ```
 
-* Once installed the XR [helpers](helpers/README.md) will be ready to use
-* Run the XR application [server](server/README.md)
+* Once installed the XR Debug [helpers](helpers/README.md) will be ready to use
+* Run the XR Debug [server](server/README.md)
 
 ```sh
-vendor/bin/xr
+docker run -t --init --rm ghcr.io/chevere/xr-server
 ```
 
-* Open [localhost:27420](http://localhost:27420) and profit
+* Open [localhost:27420](http://localhost:27420) and profit!
 
 <video width="100%" poster="./src/social/github.jpg" controls>
     <source src="./src/video/cremino.mp4" type="video/mp4">
