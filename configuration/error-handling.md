@@ -13,4 +13,4 @@ register_shutdown_function(
 );
 ```
 
-Once done, refer to [Exception handling](exception-handling.md).
+Once done, continue to [Exception handling](exception-handling.md).
