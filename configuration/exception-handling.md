@@ -8,7 +8,7 @@ Check our [ThrowableHandler](https://chevere.org/packages/throwable-handler.html
 
 ## Register XR Debug handler
 
-Use `Chevere\Xr\registerThrowableHandler` to enable XR Debug throwable handling.
+Use `registerThrowableHandler` to enable XR Debug throwable handling.
 
 ```php
 
@@ -21,7 +21,7 @@ registerThrowableHandler(true);
 
 ## Triggered handler
 
-Use `Chevere\Xr\throwableHandler` in any existing exception handler logic:
+Use `throwableHandler` in any existing exception handler logic:
 
 ```php
 use Chevere\Xr\throwableHandler;

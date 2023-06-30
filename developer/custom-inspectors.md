@@ -1,6 +1,6 @@
 # Custom inspectors
 
-An inspector is a class implementing `Chevere\Xr\Interfaces\XrInspectorInterface` and it can be used provide better insights for your existing application, making the process easier to your users.
+An inspector is a class implementing `XrInspectorInterface` and it can be used provide customized debug insights for your application.
 
 ## Inspector interface
 
