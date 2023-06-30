@@ -4,25 +4,29 @@
 
 Configure XR Debug by creating a file named `xr.php` in your project root directory with the following options:
 
-| Property | Type   | Effect                                    |
-| -------- | ------ | ----------------------------------------- |
-| enable   | bool   | Controls sending messages to the server   |
-| host     | string | The host where XR Debug server is running |
-| port     | int    | The Port to connect to the `host`         |
-| key      | string | Private key                               |
+| Property  | Type   | Effect                                    |
+| --------- | ------ | ----------------------------------------- |
+| isEnabled | bool   | Controls sending messages to the server   |
+| isHttps   | bool   | Controls use of https                     |
+| host      | string | The host where XR Debug server is running |
+| port      | int    | The Port to connect to the `host`         |
+| key       | string | Private key                               |
 
-The following example is a `xr.php` file with default settings.
+The following example is a `xr.php` file:
 
 ```php
 <?php
 
 return [
-    'enable' => true,
+    'isEnabled' => true,
+    'isHttps' => false,
     'host' => 'localhost',
     'port' => 27420,
     'key' => '',
 ];
 ```
+
+XR Debug assumes the above configuration values by default.
 
 > We recommend adding `xr.php` to your `.gitignore`.
 
@@ -34,13 +38,15 @@ If you want to handle XR Debug settings somewhere within your existing applicati
 use Chevere\Xr\Xr;
 use Chevere\Xr\XrInstance;
 
-$enable = true;
+$isEnabled = true;
+$isHttps = false;
 $host = 'localhost';
 $port = 27420;
 $key = file_get_contents('private.key');
 new XrInstance(
     new Xr(
-        enable: $enable,
+        isEnabled: $isEnabled,
+        isHttps: $isEnabled,
         host: $host,
         port: $port,
         key: $key
