@@ -27,7 +27,7 @@ composer require --dev chevere/xr
 * Run the XR Debug [server](server/README.md)
 
 ```sh
-docker run -t --init --rm ghcr.io/chevere/xr-server
+docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xr-server
 ```
 
 * Open [localhost:27420](http://localhost:27420) and profit!

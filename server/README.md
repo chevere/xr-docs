@@ -43,7 +43,7 @@ vendor/bin/xr
 Run the following command to start the server at port `27420`:
 
 ```sh
-docker run -t --init --rm ghcr.io/chevere/xr-server
+docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xr-server
 ```
 
 🐋 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
