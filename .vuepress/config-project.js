@@ -4,11 +4,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: `/logo.svg`
-        }],
-        ['link', {
-            rel: 'manifest',
-            href: '/manifest.json'
+            href: '/logo.svg'
         }],
         ['meta', {
             name: 'theme-color',
@@ -42,6 +38,7 @@ module.exports = {
     ],
     themeConfig: {
         logo: '/logo.svg',
+        pwa: false,
         repo: 'chevere/xr',
         docsRepo: 'chevere/xr-docs',
         docsBranch: 'main',
