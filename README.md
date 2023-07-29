@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo.svg
-heroText: XR Debug
+heroText: xrDebug
 tagline: Lightweight debug utility for PHP.
 actionText: Introduction →
 actionLink: /introduction/
@@ -23,11 +23,11 @@ footer: Made by Rodolfo Berrios
 composer require --dev chevere/xr
 ```
 
-* Once installed the XR Debug [helpers](helpers/README.md) will be ready to use
-* Run the XR Debug [server](server/README.md)
+* Once installed the `xr`` [helpers](helpers/README.md) will be ready to use
+* Run xrDebug [server](server/README.md)
 
 ```sh
-docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xr-server
+docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xrdebug
 ```
 
 * Open [localhost:27420](http://localhost:27420) and profit!

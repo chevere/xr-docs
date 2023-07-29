@@ -1,4 +1,4 @@
-# XR
+# xr
 
 Use `xr()` to dump variables.
 

@@ -1,15 +1,15 @@
-# 🦄 Server
+# Server
 
-The XR Debug server is the layer charge of receive and stream the debug messages. The XR Debug server can spawn from your project folder, [Docker](docker.md) and even from a [third-party server](../developer/server-spec.md).
+The xrDebug server is the layer charge of receive and stream the debug messages. The xrDebug server can spawn from your project folder, [Docker](docker.md) and even from a [third-party server](../developer/server-spec.md).
 
-The repository source is available at [GitHub](https://github.com/chevere/xr-server).
+The repository source is available at [GitHub](https://github.com/chevere/xrdebug).
 
 ## Source server
 
 To run from source clone the repository:
 
 ```sh
-git clone https://github.com/chevere/xr-server.git
+git clone https://github.com/chevere/xrdebug.git
 ```
 
 Then install dependencies using Composer:
@@ -21,7 +21,7 @@ composer install
 Run the server:
 
 ```sh
-./xr
+./xrdebug
 ```
 
 ## Dependency server
@@ -29,13 +29,13 @@ Run the server:
 Install the server repository as a dependency for your project using Composer:
 
 ```sh
-composer require --dev chevere/xr-server
+composer require --dev chevere/xrdebug
 ```
 
 Run the server:
 
 ```sh
-vendor/bin/xr
+vendor/bin/xrdebug
 ```
 
 ## Docker server
@@ -43,7 +43,7 @@ vendor/bin/xr
 Run the following command to start the server at port `27420`:
 
 ```sh
-docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xr-server
+docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xrdebug
 ```
 
 🐋 Check [Docker configuration](../configuration/docker-configuration.md) when using Docker.
@@ -51,17 +51,32 @@ docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xr-server
 ## Server options
 
 ```sh
-./xr <options>
+./xrdebug <options>
 ```
 
 | Option | Description                    |
 | ------ | ------------------------------ |
-| -p     | Port                           |
+| -p     | Port (default 27420)           |
+| -n     | Session name (default xrDebug) |
 | -e     | Enable end-to-end encryption   |
-| -k     | Symmetric key (to use with -e) |
 | -v     | Enable sign verification       |
-| -s     | Private key (to use with -v)   |
 | -c     | Cert file for TLS              |
+| -k     | [for -e option] Symmetric key  |
+| -s     | [for -v option] Private key    |
+| -i     | Editor (default vscode)        |
+
+[For -i option] Supported IDEs:
+
+* atom
+* emacs
+* espresso
+* idea
+* macvim
+* netbeans
+* phpstorm
+* sublime
+* textmate
+* vscode
 
 ## Demo
 

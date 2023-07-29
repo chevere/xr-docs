@@ -1,4 +1,4 @@
-# XR Debug Inspector
+# xri
 
 Use `xri()` to interact with the inspector.
 

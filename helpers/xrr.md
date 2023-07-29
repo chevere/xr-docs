@@ -1,4 +1,4 @@
-# XR Debug Raw
+# xrr
 
 Use `xrr()` to send a raw message (HTML) to the debugger.
 

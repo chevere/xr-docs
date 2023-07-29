@@ -2,15 +2,15 @@
 
 ## File-based
 
-Configure XR Debug by creating a file named `xr.php` in your project root directory with the following options:
+Configure xrDebug by creating a file named `xr.php` in your project root directory with the following options:
 
-| Property  | Type   | Effect                                    |
-| --------- | ------ | ----------------------------------------- |
-| isEnabled | bool   | Controls sending messages to the server   |
-| isHttps   | bool   | Controls use of https                     |
-| host      | string | The host where XR Debug server is running |
-| port      | int    | The Port to connect to the `host`         |
-| key       | string | Private key                               |
+| Property  | Type   | Effect                                   |
+| --------- | ------ | ---------------------------------------- |
+| isEnabled | bool   | Controls sending messages to the server  |
+| isHttps   | bool   | Controls use of https                    |
+| host      | string | The host where xrDebug server is running |
+| port      | int    | The Port to connect to the `host`        |
+| key       | string | Private key                              |
 
 The following example is a `xr.php` file:
 
@@ -26,13 +26,13 @@ return [
 ];
 ```
 
-XR Debug assumes the above configuration values by default.
+xrDebug assumes the above configuration values by default.
 
 > We recommend adding `xr.php` to your `.gitignore`.
 
 ## Code-based
 
-If you want to handle XR Debug settings somewhere within your existing application logic and not depend on the `xr.php` file:
+If you want to handle xrDebug settings somewhere within your existing application logic and not depend on the `xr.php` file:
 
 ```php
 use Chevere\Xr\Xr;

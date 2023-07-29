@@ -1,6 +1,6 @@
 # Docker
 
-A [container image](https://github.com/chevere/xr/pkgs/container/xr) is available for running the XR Debug server. Refer to [Docker configuration](../configuration/docker-configuration.md) when using this container image.
+A [container image](https://github.com/chevere/xr/pkgs/container/xr) is available for running the xrDebug server. Refer to [Docker configuration](../configuration/docker-configuration.md) when using this container image.
 
 ## Docker commands
 

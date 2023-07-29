@@ -4,7 +4,7 @@ An inspector is a class implementing `XrInspectorInterface` and it can be used p
 
 ## Inspector interface
 
-This interface is in charge of defining a standard XR Debug inspector and in concrete classes you can freely add any method(s) for stream messages by using the `sendMessage` method.
+This interface is in charge of defining a standard xrDebug inspector and in concrete classes you can freely add any method(s) for stream messages by using the `sendMessage` method.
 
 ### Inspector sample
 
@@ -40,12 +40,12 @@ For code above, `myQueries` defines an method inspector that will stream queries
 
 ### Notes on parameters
 
-* Define topic `$t`, emote `$e` and flag `$f` in your parameters so your inspector adheres to XR Debug functionality.
+* Define topic `$t`, emote `$e` and flag `$f` in your parameters so your inspector adheres to xrDebug functionality.
 * Use docblock to document your parameters, it will be easy for your users.
 
 ## Null inspector
 
-A null inspector is required to void any inspection call **if XR Debug is disabled**. The null inspector should implement the same methods as the real inspector, but without carrying any action.
+A null inspector is required to void any inspection call **if xrDebug is disabled**. The null inspector should implement the same methods as the real inspector, but without carrying any action.
 
 ### Null inspector sample
 
@@ -80,7 +80,7 @@ For each inspector you will want to create a helper function to easily access to
 
 ### Helper function sample
 
-💡 This helper function is special as if XR Debug is disabled it will use the [null inspector](#null-inspector), voiding any variable introspection.
+💡 This helper function is special as if xrDebug is disabled it will use the [null inspector](#null-inspector), voiding any variable introspection.
 
 ```php
 use Chevere\Xr\Inspector\XrInspectorInstance;
@@ -90,7 +90,7 @@ use MyXrInspector;
 use MyXrInspectorNull;
 
 /**
- * Access to my custom XR Debug inspector
+ * Access to my custom xrDebug inspector
  */
 function my_xri(): MyXrInspector
 {

@@ -1,24 +1,241 @@
----
-sidebar: false
----
-
 # Server spec
 
-`🚧 work in progress`
+The xrDebug server spec defines a language-agnostic web service standard where any compatible client library can implement [xr helpers](../helpers/README.md) in their own language.
 
-The XR Debug server spec defines a web service standard compatible with all the client libraries following the XR Debug interface. This enables to create custom compatible server implementation for using with XR Debug.
+`app/compiled/schwager.json`
 
-```plain
-POST http://localhost:27420/message
-    body=Hola, mundo
-    file_path=/var/www/file.php
-    file_line=123
-    ...
+```json
+{
+    "api": "xr",
+    "name": "xrDebug API",
+    "version": "1.0.0",
+    "servers": [
+        {
+            "url": "http:\/\/0.0.0.0:27420",
+            "description": "xrDebug"
+        }
+    ],
+    "paths": {
+        "\/": {
+            "name": "\/",
+            "regex": "\/",
+            "endpoints": {
+                "GET": {
+                    "description": "Single page application",
+                    "responses": {
+                        "200": [
+                            {
+                                "context": "SPAController",
+                                "body": {
+                                    "type": "string",
+                                    "regex": "^.*$\/m"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "\/messages": {
+            "name": "\/messages",
+            "regex": "\/messages",
+            "endpoints": {
+                "POST": {
+                    "description": "Create a debug message",
+                    "body": {
+                        "type": "array#map",
+                        "parameters": {
+                            "body": {
+                                "required": false,
+                                "type": "string",
+                                "regex": ".*?"
+                            },
+                            "emote": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "file_line": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "file_path": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "id": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "topic": {
+                                "required": false,
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "responses": {
+                        "204": [
+                            {
+                                "context": "MessagePostController",
+                                "body": {
+                                    "type": "null"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "\/pauses": {
+            "name": "\/pauses",
+            "regex": "\/pauses",
+            "endpoints": {
+                "POST": {
+                    "description": "Create a pause",
+                    "body": {
+                        "type": "array#map",
+                        "parameters": {
+                            "id": {
+                                "type": "string",
+                                "regex": "^[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}$"
+                            },
+                            "body": {
+                                "required": false,
+                                "type": "string",
+                                "regex": ".*?"
+                            },
+                            "emote": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "file_line": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "file_path": {
+                                "required": false,
+                                "type": "string"
+                            },
+                            "topic": {
+                                "required": false,
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "responses": {
+                        "201": [
+                            {
+                                "context": "PausePostController",
+                                "body": {
+                                    "type": "array#map",
+                                    "parameters": {
+                                        "pause": {
+                                            "type": "boolean"
+                                        },
+                                        "stop": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "\/pauses\/{id}": {
+            "name": "\/pauses\/{id}",
+            "regex": "^(?|\/pauses\/([0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}))$",
+            "variables": {
+                "id": {
+                    "type": "string",
+                    "regex": "^[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}$"
+                }
+            },
+            "endpoints": {
+                "DELETE": {
+                    "description": "Delete a pause",
+                    "responses": {
+                        "204": [
+                            {
+                                "context": "PauseDeleteController"
+                            }
+                        ],
+                        "404": [
+                            {
+                                "context": "PauseDeleteController"
+                            }
+                        ]
+                    }
+                },
+                "GET": {
+                    "description": "Get a pause",
+                    "responses": {
+                        "200": [
+                            {
+                                "context": "PauseGetController",
+                                "body": {
+                                    "type": "array#map",
+                                    "parameters": {
+                                        "pause": {
+                                            "type": "boolean"
+                                        },
+                                        "stop": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        ],
+                        "404": [
+                            {
+                                "context": "PauseGetController"
+                            }
+                        ]
+                    }
+                },
+                "PATCH": {
+                    "description": "Update a pause to stop execution",
+                    "responses": {
+                        "200": [
+                            {
+                                "context": "PausePatchController",
+                                "body": {
+                                    "type": "array#map",
+                                    "parameters": {
+                                        "pause": {
+                                            "type": "boolean"
+                                        },
+                                        "stop": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "\/stream": {
+            "name": "\/stream",
+            "regex": "\/stream",
+            "endpoints": {
+                "GET": {
+                    "description": "Debug stream",
+                    "responses": {
+                        "200": [
+                            {
+                                "context": "StreamController",
+                                "body": {
+                                    "type": "className",
+                                    "className": "React\\Stream\\ThroughStream"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
 ```
-
-* `body` - The message raw body (HTML).
-* `file_path` - The file path.
-* `file_line` - The file line.
-* `emote` - emote (emojis/symbols).
-* `topic` - Topic as message context.
-* `action` - `message|pause`.

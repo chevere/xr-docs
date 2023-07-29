@@ -11,10 +11,10 @@ Once installed, the [helper functions](../helpers/README.md) will be available i
 
 ## Running the server
 
-The `chevere/xr` package includes the XR Debug server. To run the server:
+The `chevere/xr` package includes the xrDebug server. To run the server:
 
 ```sh
 vendor/bin/xr
 ```
 
-💡 Refer to [Server](../server/README.md) for additional instructions in how to provide the XR Debug server.
+💡 Refer to [Server](../server/README.md) for additional instructions in how to provide the xrDebug server.
