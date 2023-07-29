@@ -6,11 +6,11 @@ tagline: Lightweight debug utility for PHP.
 actionText: Introduction →
 actionLink: /introduction/
 features:
-- title: 😌 Easy to use
+- title: Easy to use
   details: Full-featured with a gorgeous user interface.
-- title: 🍒 Portable & HTML based
+- title: Portable & HTML based
   details: One-click server run. No extra dependencies.
-- title: 🦄 Beautiful
+- title: Beautiful
   details: Yet another debugger, but it looks danky!
 footer: Made by Rodolfo Berrios
 ---
