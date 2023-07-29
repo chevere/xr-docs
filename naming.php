@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'introduction/' => '🎉 Intro',
-    'configuration/' => '⚙️ Config',
-    'server/' => '🦄 Server',
-    'helpers/' => '🕹 Helpers',
-    'developer/' => '🛸 Dev',
+    'introduction/' => 'Intro',
+    'configuration/' => 'Config',
+    'server/' => 'Server',
+    'helpers/' => 'Helpers',
+    'developer/' => 'Dev',
 ];
