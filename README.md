@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.svg
 heroText: xrDebug
-tagline: Lightweight debug utility for PHP.
+tagline: Lightweight debug utility.
 actionText: Introduction →
 actionLink: /introduction/
 features:
@@ -23,7 +23,7 @@ footer: Made by Rodolfo Berrios
 composer require --dev chevere/xr
 ```
 
-* Once installed the `xr`` [helpers](helpers/README.md) will be ready to use
+* Once installed the `xr` [helpers](helpers/README.md) will be ready to use
 * Run xrDebug [server](server/README.md)
 
 ```sh

@@ -3,7 +3,7 @@
 xrDebug provides a throwable handler can hook or replace your existing exception handler logic.
 
 ::: tip ThrowableHandler
-Check our [ThrowableHandler](https://chevere.org/packages/throwable-handler.html) package for more into exception & error handling for PHP software. The `chevere/throwable-handler` package is included with xrDebug.
+Check our [ThrowableHandler](https://chevere.org/packages/throwable-handler.html) package for more into exception & error handling for PHP software. The `chevere/throwable-handler` package is included with `chevere/xr`.
 :::
 
 ## Register xrDebug handler

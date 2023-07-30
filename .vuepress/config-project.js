@@ -1,6 +1,6 @@
 module.exports = {
     title: 'xrDebug',
-    description: 'Lightweight debug utility for PHP.',
+    description: 'Lightweight debug utility',
     head: [
         ['link', {
             rel: 'icon',

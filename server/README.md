@@ -4,6 +4,28 @@ The xrDebug server is the layer charge of receive and stream the debug messages.
 
 The repository source is available at [GitHub](https://github.com/chevere/xrdebug).
 
+## PHAR server (recommended)
+
+Download latest `xrdebug.phar` from [releases](https://github.com/chevere/xrdebug/releases).
+
+Make the file executable:
+
+```sh
+chmod +x xrdebug.phar
+```
+
+Move it to bin:
+
+```sh
+mv xrdebug.phar /usr/local/bin/xrdebug
+```
+
+Run the server:
+
+```sh
+xrdebug
+```
+
 ## Source server
 
 To run from source clone the repository:
@@ -77,11 +99,3 @@ docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xrdebug
 * sublime
 * textmate
 * vscode
-
-## Demo
-
-Spawn the server then run:
-
-```php
-php vendor/chevere/xr/demo/demo.php
-```
