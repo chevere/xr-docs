@@ -1,8 +1,8 @@
 # Introduction
 
-xrDebug is a dump debug utility for PHP. It uses a [ReactPHP](https://reactphp.org/) [SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) server to provide a web-based debug [application server](../server/README.md) that you can access in any web browser.
+xrDebug is a dump debug utility providing an [application server](../server/README.md) where you can send debug payloads, and stream these messages to multiple peers in any web browser.
 
-Here's, this is what you write in your PHP code:
+Here's, this is what you write in your code:
 
 ```php
 xr('Hello, world!');
@@ -12,7 +12,7 @@ xr(theArray: ['a' => 0, 'b' => 1], t: 'my-topic', e: '📌');
 xr(🤭: 'wow', 👽: 'many', 😎: 'args');
 ```
 
-Here's how it looks in xrDebug debugger:
+Here's how it looks in xrDebug:
 
 ![intro](../src/app/intro.png)
 
@@ -28,6 +28,6 @@ xrDebug generates a beautiful variable introspection on site using [VarDump](htt
 
 ## Does it work with X?
 
-xrDebug works in any PHP 8.0+ codebase.
+xrDebug works with anything as it is a language-agnostic dump debug server. It is portable, distributed as a self-executable binary and `.phar` file.
 
 You can use it in your framework, CMS or custom application. You are encouraged to [contribute](contributing.md) with vendor-specific support to make xrDebug more context-aware.

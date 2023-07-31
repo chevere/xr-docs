@@ -1,12 +1,22 @@
 # Server
 
-The xrDebug server is the layer charge of receive and stream the debug messages. The xrDebug server can spawn from your project folder, [Docker](docker.md) and even from a [third-party server](../developer/server-spec.md).
+The xrDebug server is the layer charge of the server side application, it receive and stream debug messages. The xrDebug server can spawn from your project folder, [Docker](docker.md) and even from a [third-party server](../developer/api.md).
 
 The repository source is available at [GitHub](https://github.com/chevere/xrdebug).
 
-## PHAR server (recommended)
+## Self-executable binary (recommended)
 
-Download latest `xrdebug.phar` from [releases](https://github.com/chevere/xrdebug/releases).
+Download latest `xrdebug` binary from [releases](https://github.com/chevere/xrdebug/releases).
+
+Run the server:
+
+```sh
+xrdebug
+```
+
+## PHAR server
+
+Download latest `xrdebug.phar` file from [releases](https://github.com/chevere/xrdebug/releases).
 
 Make the file executable:
 

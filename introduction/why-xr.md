@@ -1,12 +1,12 @@
 # Why xrDebug?
 
-You may be wonder *why I need another debugger?* if at PHP we already have debuggers like xDebug, Debugbar, Clockwork, Spatie Ray, etc. The main selling point of xrDebug is being a remote debugger with **minimal footprint**. Not only it is an small package, is all about less is more. xrDebug setup and running takes no time and the user interface is dead simple.
+You may be wonder *why I need another debugger?* if at we already have debuggers like xDebug, Debugbar, Clockwork, Spatie Ray, etc. The main selling point of xrDebug is being a remote debugger with **minimal footprint**. Not only it is an small package, is all about less is more. xrDebug setup and running takes no time and the user interface is dead simple.
 
 ## Lightweight
 
 *Small package, minimal dependencies.*
 
-xrDebug is *really* lightweight. It doesn't need anything extra besides PHP and a web browser to use it. No distro-based package, no extra installs, compile extensions or even tweak your `php.ini`.
+xrDebug is *really* lightweight. It doesn't need anything extra besides its self-executable binary and a web browser to use it. No distro-based package, no extra installs, compile extensions or even tweak your `php.ini`.
 
 ## Ephemeral
 
@@ -41,8 +41,6 @@ xrDebug uses topics and emotes to provide extra context to your dump information
 ## Why xrDebug and not X?
 
 Any tool exists as a better fit depending on your use case and needs and only a fool will limit to just one debugger. We believe that it all depends on your context what suits best, we built the following comparison tables to enable you to easy understand where xrDebug fits best.
-
-With PHP software you always have plenty alternatives and that's all what matters, that we embrace a language where we can take so many different choices.
 
 ### Spatie Ray
 
