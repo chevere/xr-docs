@@ -1,4 +1,6 @@
-# Custom inspectors
+# Custom helpers
+
+This reference is for `chevere/xr` xrDebug PHP client library. It works as an example on how you can extend your base library to add more
 
 An inspector is a class implementing `XrInspectorInterface` and it can be used provide customized debug insights for your application.
 

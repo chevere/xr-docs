@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'custom-inspectors.md',
-    'message-reference.md',
+    'api.md',
+    'custom-helpers.md',
 ];

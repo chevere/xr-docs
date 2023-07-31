@@ -4,11 +4,15 @@ The xrDebug API standard defines a language-agnostic web service where any compa
 
 ## Examples
 
+Following examples use [curl](https://curl.se/) to issue HTTP requests to xrDebug API.
+
 ### Create a debug message
+
+`POST /messages`
 
 When creating a debug message it will be streamed to xrDebug window.
 
-To create a debug message `POST /messages`. All the following fields are optional: `body`, `emote`, `file_line`, `file_path`, `id`, `topic` (but at least one is required).
+All body fields are optional: `body`, `emote`, `file_line`, `file_path`, `id`, `topic` (but at least one is required).
 
 ```sh
 curl --fail -X POST \
@@ -20,9 +24,11 @@ curl --fail -X POST \
 
 ### Create a pause
 
+`POST /pauses/{id}`
+
 When creating a pause a lock for the given id will be created. When the helper sends `xri()->pause()` the system creates a lock file with `{"stop":false}` contents.
 
-To create a pause `POST /pauses/{id}`. All the following fields are optional: `body`, `emote`, `file_line`, `file_path`, `topic`.
+All body fields are optional: `body`, `emote`, `file_line`, `file_path`, `topic`.
 
 ```sh
 curl --fail -X POST \
@@ -32,9 +38,9 @@ curl --fail -X POST \
 
 ### Get a pause
 
-If a pause exists it means that execution is paused for the given id. The helper which called `xri()->pause()` should sleep while the pause exists. If the contents are `{"stop":false}` the id is paused, if contents are `{"stop":true}` the id is stopped.
+`GET /pauses/{id}`
 
-To get a pause `GET /pauses/{id}`.
+If a pause exists it means that execution is paused for the given id. The helper which called `xri()->pause()` should sleep while the pause exists. If the contents are `{"stop":false}` the id is paused, if contents are `{"stop":true}` the id is stopped.
 
 ```sh
 curl --fail -X GET \
@@ -43,9 +49,9 @@ curl --fail -X GET \
 
 ### Delete a pause
 
-When deleting a pause the lock previously created will be removed, which will continue code execution.
+`DELETE /pauses/{id}`
 
-To delete a pause `DELETE` to `/pauses/{id}`.
+When deleting a pause the lock previously created will be removed, which will continue code execution.
 
 ```sh
 curl --fail -X DELETE \
@@ -54,9 +60,9 @@ curl --fail -X DELETE \
 
 ### Update a pause to stop execution
 
-When updating a pause it will update the lock file to return `{"stop":true}`. The helper which called `xri()->pause()` should stop execution if the pause was updated.
+`PATCH /pauses/{id}`
 
-To update a pause `PATCH /pauses/{id}`.
+When updating a pause it will update the lock file to return `{"stop":true}`. The helper which called `xri()->pause()` should stop execution once it notices that the pause was updated to instruct stop code execution.
 
 ```sh
 curl --fail -X PATCH \
@@ -65,9 +71,9 @@ curl --fail -X PATCH \
 
 ## Schwager
 
-xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing our API standard. API `schwager.json` file is included in every [release](https://github.com/chevere/xrdebug/releases).
+xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing HTTP API standard. The `schwager.json` file is included in every [release](https://github.com/chevere/xrdebug/releases).
 
-* All parameters are required except if `required: false`
+* All parameters required except if `required: false`
 
 ```json
 {

@@ -16,7 +16,7 @@ Here's how it looks in xrDebug:
 
 ![intro](../src/app/intro.png)
 
-There are other [helper functions](../helpers/README.md) that allow you to show system information, pause your code, etc. You can easily [build your own](../developer/custom-inspectors.md) dump functions tailored for your specific application context.
+There are other [helper functions](../helpers/README.md) that allow you to show system information, pause your code, etc. You can easily [build your own](../developer/custom-helpers.md) dump functions tailored for your specific application context.
 
 ## How it works?
 

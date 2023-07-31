@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'custom-inspectors.md' => 'Custom inspectors',
-    'message-reference.md' => 'Message ref.',
+    'api.md' => 'API',
+    'custom-helpers.md' => 'Custom helpers',
 ];
