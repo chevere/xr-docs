@@ -1,4 +1,6 @@
-# Introduction
+# Get started
+
+## What is xrDebug?
 
 xrDebug is a dump debug utility providing an [application server](../running/README.md) where you can send debug payloads, and stream these messages to multiple peers in any web browser.
 
@@ -24,7 +26,7 @@ There are other [helper functions](../helpers/README.md) that allow you to show 
 * You can [configure](../configuration/README.md) the server where your code stream messages to.
 * Calls to `xr()` [helpers](../helpers/README.md) in your code emit a message to the configured xrDebug server.
 
-xrDebug receives any variable introspection using helpers in your code and then these HTML messages are streamed in the web interface of your xrDebug server.
+xrDebug receives any variable introspection using helpers in your code and then these messages are streamed in the web interface of xrDebug server.
 
 ## Does it work with X?
 

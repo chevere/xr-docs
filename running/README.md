@@ -1,10 +1,16 @@
-# Running
+---
+sidebar: false
+---
 
-The xrDebug server is the layer charge of the server side application, to receive and stream debug messages. The xrDebug server can spawn from self-executing binary, your project folder and [Docker](docker.md).
+# Running xrDebug
+
+To run xrDebug execute:
 
 ```sh
 xrdebug <options>
 ```
+
+## Options
 
 | Option | Description                    |
 | ------ | ------------------------------ |
@@ -12,6 +18,7 @@ xrdebug <options>
 | -n     | Session name (default xrDebug) |
 | -e     | Enable end-to-end encryption   |
 | -v     | Enable sign verification       |
+| -w     | Working directory              |
 | -c     | Cert file for TLS              |
 | -k     | [for -e option] Symmetric key  |
 | -s     | [for -v option] Private key    |
@@ -29,3 +36,11 @@ xrdebug <options>
 * sublime
 * textmate
 * vscode
+
+## Help
+
+Pass `-h` to show help information.
+
+```sh
+xrdebug -h
+```
