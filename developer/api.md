@@ -24,11 +24,11 @@ curl --fail -X POST \
 
 ### Create a pause
 
-`POST /pauses/{id}`
+`POST /pauses`
 
 When creating a pause a lock for the given id will be created. When the helper sends `xri()->pause()` the system creates a lock file with `{"stop":false}` contents.
 
-All body fields are optional: `body`, `emote`, `file_line`, `file_path`, `topic`.
+Requires `id`, supports optional body fields: `body`, `emote`, `file_line`, `file_path`, `topic`.
 
 ```sh
 curl --fail -X POST \

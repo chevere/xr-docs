@@ -2,6 +2,8 @@
 
 The PHP client library for xrDebug is available at [chevere/xr](https://github.com/chevere/xr).
 
+## Installing
+
 * Requires [Composer](https://getcomposer.org/)
 * Add `chevere/xr` as a dev dependency in your project:
 
@@ -11,7 +13,7 @@ composer require --dev chevere/xr
 
 Helper functions will be available in the global namespace.
 
-## Configuring PHP client
+## Configuring
 
 In addition to [xrConfig](../helpers/xrconfig.md), PHP client can be configured by placing a `xr.php` file in project's root directory.
 
@@ -49,11 +51,28 @@ Use `vdd()` to dump information about one or more variables to the registered ou
 vdd('Hola, mundo!', $var);
 ```
 
+## Error handling
+
+To handle errors with xrDebug and the PHP client you will require to configure your project to handle errors as exceptions:
+
+```php
+use Chevere\ThrowableHandler\ThrowableHandler;
+
+set_error_handler(
+    ThrowableHandler::ERROR_AS_EXCEPTION
+);
+register_shutdown_function(
+    ThrowableHandler::SHUTDOWN_ERROR_AS_EXCEPTION
+);
+```
+
+Once done, continue to [Exception handling](exception-handling.md).
+
 ## Exception handling
 
 The PHP client provides a throwable handler that can hook or replace existing exception handler logic thanks to the [ThrowableHandler](https://chevere.org/packages/throwable-handler) package.
 
-### Register throwable handler
+### Register handler
 
 Use `registerThrowableHandler` to enable xrDebug throwable handling.
 
@@ -84,20 +103,3 @@ set_exception_handler(
     }
 );
 ```
-
-## Error handling
-
-To handle errors with xrDebug and the PHP client you will require to configure your project to handle errors as exceptions:
-
-```php
-use Chevere\ThrowableHandler\ThrowableHandler;
-
-set_error_handler(
-    ThrowableHandler::ERROR_AS_EXCEPTION
-);
-register_shutdown_function(
-    ThrowableHandler::SHUTDOWN_ERROR_AS_EXCEPTION
-);
-```
-
-Once done, continue to [Exception handling](exception-handling.md).
