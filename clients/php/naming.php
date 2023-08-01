@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'README.md' => 'Configuration',
-    'docker-configuration.md' => 'Docker configuration',
+    'README.md' => 'PHP client',
     'exception-handling.md' => 'Exception handling',
     'error-handling.md' => 'Error handling',
+    'helpers.md' => 'Helpers',
 ];

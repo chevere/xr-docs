@@ -2,9 +2,19 @@
 
 Helpers refer to functions available at user-land code that can be used to interact with xrDebug. A client library implementing [xrDebug API](../developer/api.md) should provide at least the following helpers to conveniently debug your code:
 
-* xr [xr](xr.md)
-* xr Raw [xrr](xrr.md)
-* xr Inspector [xri](xri.md)
+* [xr](xr.md)
+* [xrr](xrr.md) (xr raw)
+* [xri](xri.md) (xr inspector)
+
+The `xrConfig` helper must be provided for enabling users to configure xrDebug client interaction:
+
+* [xrConfig](xrconfig.md)
+
+Each client library *may* implement its own additional configuration system, for example using `env` or reading the config from a file.
+
+## Other languages
+
+At this time we don't have client libraries for other languages. You are encouraged to contribute here.
 
 ## Custom helpers
 

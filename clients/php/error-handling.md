@@ -1,6 +1,6 @@
 # Error handling
 
-To handle errors with xrDebug you will require to configure your project to handle errors as exceptions:
+To handle errors with xrDebug and the PHP client you will require to configure your project to handle errors as exceptions:
 
 ```php
 use Chevere\ThrowableHandler\ThrowableHandler;

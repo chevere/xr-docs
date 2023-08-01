@@ -2,8 +2,8 @@
 
 return [
     'introduction/' => 'Intro',
-    'configuration/' => 'Config',
-    'server/' => 'Server',
+    'running/' => 'Running',
+    'clients/' => 'Clients',
     'helpers/' => 'Helpers',
-    'developer/' => 'Dev',
+    'developer/' => 'Developer',
 ];

@@ -39,7 +39,7 @@ module.exports = {
     themeConfig: {
         logo: '/logo.svg',
         pwa: false,
-        repo: 'chevere/xr',
+        repo: 'chevere/xrdebug',
         docsRepo: 'chevere/xr-docs',
         docsBranch: 'main',
         smoothScroll: true,

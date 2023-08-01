@@ -1,4 +1,4 @@
-# xrDebug API
+# API
 
 The xrDebug API standard defines a language-agnostic web service where any compatible client library can implement [xr helpers](../helpers/README.md) in their own language.
 

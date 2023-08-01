@@ -1,20 +1,75 @@
 # Installation
 
-* Requires [Composer](https://getcomposer.org/)
-* Add `chevere/xr` as a dev dependency in your project:
+## Self-executable binary (recommended)
+
+Download latest `xrdebug` binary from [releases](https://github.com/chevere/xrdebug/releases).
+
+The binary will be available at:
 
 ```sh
-composer require --dev chevere/xr
+xrdebug
 ```
 
-Once installed, the [helper functions](../helpers/README.md) will be available in the global namespace.
+## PHAR
 
-## Running the server
+Download latest `xrdebug.phar` file from [releases](https://github.com/chevere/xrdebug/releases).
 
-The `chevere/xr` package includes the xrDebug server. To run the server:
+Make the file executable:
 
 ```sh
-vendor/bin/xr
+chmod +x xrdebug.phar
 ```
 
-💡 Refer to [Server](../server/README.md) for additional instructions in how to provide the xrDebug server.
+Move it to bin:
+
+```sh
+mv xrdebug.phar /usr/local/bin/xrdebug
+```
+
+The PHAR will be available at:
+
+```sh
+xrdebug
+```
+
+## Source server
+
+To install from source clone the repository:
+
+```sh
+git clone https://github.com/chevere/xrdebug.git
+```
+
+Then install dependencies using Composer:
+
+```sh
+composer install
+```
+
+The source will be available at:
+
+```sh
+./xrdebug
+```
+
+## Dependency server
+
+Install the server repository as a dependency for your project using Composer:
+
+```sh
+composer require --dev chevere/xrdebug
+```
+
+The dependency server will be available at:
+
+```sh
+vendor/bin/xrdebug
+```
+
+## Docker server
+
+Run the following command to start the server at port `27420`:
+
+```sh
+docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xrdebug
+```

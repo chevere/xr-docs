@@ -2,7 +2,7 @@
 
 return [
     'README.md',
-    'docker-configuration.md',
+    'helpers.md',
     'exception-handling.md',
     'error-handling.md',
 ];
