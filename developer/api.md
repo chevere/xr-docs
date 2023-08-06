@@ -12,7 +12,7 @@ Following examples use [curl](https://curl.se/) to issue HTTP requests to xrDebu
 
 When creating a debug message it will be streamed to xrDebug window.
 
-All body fields are optional: `body`, `emote`, `file_line`, `file_path`, `id`, `topic` (but at least one is required).
+All parameters are optional: `body`, `emote`, `file_line`, `file_path`, `id`, `topic` (but at least one is required).
 
 ```sh
 curl --fail -X POST \
