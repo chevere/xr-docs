@@ -26,7 +26,7 @@ curl --fail -X POST \
 
 `POST /pauses`
 
-When creating a pause a lock for the given id will be created. When the helper sends `xri()->pause()` the system creates a lock file with `{"stop":false}` contents.
+When creating a pause, a lock for the given id will be created. When the helper sends `xri()->pause()` the debugger creates a lock with `{"stop":false}` contents.
 
 Requires `id`, supports optional body fields: `body`, `emote`, `file_line`, `file_path`, `topic`.
 
@@ -40,7 +40,7 @@ curl --fail -X POST \
 
 `GET /pauses/{id}`
 
-If a pause exists it means that execution is paused for the given id. The helper which called `xri()->pause()` should sleep while the pause exists. If the contents are `{"stop":false}` the id is paused, if contents are `{"stop":true}` the id is stopped.
+If a pause exists it means that execution is paused for the given id. The helper which called `xri()->pause()` should sleep/wait while the pause exists. If pause contents are `{"stop":false}` the id is paused, if contents are `{"stop":true}` the id is stopped.
 
 ```sh
 curl --fail -X GET \
@@ -51,7 +51,7 @@ curl --fail -X GET \
 
 `DELETE /pauses/{id}`
 
-When deleting a pause the lock previously created will be removed, which will continue code execution.
+When deleting a pause the lock previously created will be removed, which will enable client library to continue code execution.
 
 ```sh
 curl --fail -X DELETE \
@@ -62,7 +62,7 @@ curl --fail -X DELETE \
 
 `PATCH /pauses/{id}`
 
-When updating a pause it will update the lock file to return `{"stop":true}`. The helper which called `xri()->pause()` should stop execution once it notices that the pause was updated to instruct stop code execution.
+When updating a pause it will update the pause to a full stop. GET requests will return `{"stop":true}`. The helper which called `xri()->pause()` should stop execution once the pause was updated to stop code execution.
 
 ```sh
 curl --fail -X PATCH \
