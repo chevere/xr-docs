@@ -1,18 +1,11 @@
 # Contributing
 
-## Code
+## Support other languages
 
-You can help with development by providing your time and care. xrDebug is open for any [issue](https://github.com/chevere/xr/issues) and [pull request](https://github.com/chevere/xr/pulls), bug reporting, testing, translating, documenting, design, etc.
+xrDebug is a server-client system where client libraries can be created for any programming language. Is easy as an HTTP client implementing our API.
 
-## Project
-
-You can help to build a bigger project by doing the following:
-
-* Engaging in [GitHub discussions](https://github.com/chevere/xr/discussions)
-* Mentioning xrDebug to your friends or colleagues
-* Writing about it (guides, blog posts, etc.)
-* Making videos showing others how to use it
+You are encouraged to contribute here.
 
 ## Contact
 
-You can contact the developer at `rodolfo@chevere.org`.
+You can contact the main developer at `rodolfo@chevere.org`.
