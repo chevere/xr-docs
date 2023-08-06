@@ -10,11 +10,7 @@ The `xrConfig` helper must be provided for enabling users to configure xrDebug c
 
 * [xrConfig](xrconfig.md)
 
-Each client library *may* implement its own additional configuration system, for example using `env` or reading config from a file.
-
-## Other languages
-
-At this time we don't have client libraries for other languages. You are encouraged to contribute here.
+**Note:** Each client library *may* implement its own additional configuration, for example using `env` or reading config from a file.
 
 ## Custom helpers
 
