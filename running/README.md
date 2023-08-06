@@ -10,6 +10,8 @@ To run xrDebug execute:
 xrdebug <options>
 ```
 
+> (*) Command location may vary depending on your [installation](../introduction/installation.md).
+
 ## Options
 
 | Option | Description                    |

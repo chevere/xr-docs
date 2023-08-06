@@ -69,9 +69,34 @@ curl --fail -X PATCH \
     http://127.0.0.1:27420/pauses/b1cabc9a-145f-11ee-be56-0242ac120002
 ```
 
-## Schwager
+### Request signing
 
-xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing HTTP API standard. The `schwager.json` file is included in every [release](https://github.com/chevere/xrdebug/releases).
+When using sign verification (`-v` option) requests must add the `X-Signature` header.
+
+First, sign the data fields:
+
+```php
+$serialize = serialize($data);
+$sign = $privateKey->sign($serialize);
+$signature = base64_encode($sign);
+```
+
+Then pass the signature header:
+
+```sh
+curl --fail -X POST \
+    --data "body=My signed message" \
+    --data "file_path=file" \
+    --data "file_line=1" \
+    -H "X-Signature: <signature>" \
+    http://127.0.0.1:27420/messages
+```
+
+
+
+## Spec
+
+xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing its HTTP API.
 
 * All parameters required except if `required: false`
 

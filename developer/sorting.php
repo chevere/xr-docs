@@ -2,5 +2,5 @@
 
 return [
     'api.md',
-    'custom-helpers.md',
+    'client-library.md',
 ];

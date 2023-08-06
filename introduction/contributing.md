@@ -1,10 +1,10 @@
 # Contributing
 
-## Support other languages
+Contribution is welcome.
 
-xrDebug is a server-client system where client libraries can be created for any programming language. Is easy as an HTTP client implementing our API.
-
-You are encouraged to contribute here.
+* Application [chevere/xrdebug](https://github.com/chevere/xrdebug)
+* Documentation [chevere/xr-docs](https://github.com/chevere/xr-docs)
+* [API](../developer/api.md) client libraries
 
 ## Contact
 

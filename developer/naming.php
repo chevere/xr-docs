@@ -2,5 +2,5 @@
 
 return [
     'api.md' => 'API',
-    'custom-helpers.md' => 'Custom helpers',
+    'client-library.md' => 'Client library',
 ];

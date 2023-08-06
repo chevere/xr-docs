@@ -10,12 +10,8 @@ The `xrConfig` helper must be provided for enabling users to configure xrDebug c
 
 * [xrConfig](xrconfig.md)
 
-**Note:** Each client library *may* implement its own additional configuration, for example using `env` or reading config from a file.
+## Guidelines
 
-## Custom helpers
+Client libraries *may* implement its own additional configuration system, for example using `env` or reading config from a file.
 
-Custom helpers refer to extra helpers added to your project, framework or CMS in order to debug information useful for a given context. For example, when using a database-driven framework it could be nice to get support for debugging database queries.
-
-Custom helpers should extend or base upon a pre-existing client library, that way you only focus in the payload and not in the connection to the xrDebug server.
-
-You can learn how to create your own [custom helpers](../developer/custom-helpers.md) following the base PHP example.
+Client libraries *may* provide more helpers as needed.

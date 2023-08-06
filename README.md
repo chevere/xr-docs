@@ -2,36 +2,30 @@
 home: true
 heroImage: /logo.svg
 heroText: xrDebug
-tagline: Lightweight debug utility.
+tagline: Lightweight debug utility
 actionText: Introduction →
 actionLink: /introduction/
 features:
 - title: Easy to use
   details: Full-featured with a gorgeous user interface.
 - title: Portable & HTML based
-  details: One-click server run. No extra dependencies.
+  details: One-click disposable server run.
 - title: Beautiful
   details: Yet another debugger, but it looks danky!
 footer: Made by Rodolfo Berrios
 ---
 
-# Quick start
-
-* Install using [Composer](https://getcomposer.org/)
-
-```sh
-composer require --dev chevere/xr
-```
-
-* Once installed the `xr` [helpers](helpers/README.md) will be ready to use
-* Run xrDebug [server](server/README.md)
-
-```sh
-docker run -t --init --rm -p 27420:27420 ghcr.io/chevere/xrdebug
-```
-
-* Open [localhost:27420](http://localhost:27420) and profit!
-
 <video width="100%" poster="./src/social/github.jpg" controls>
     <source src="./src/video/cremino.mp4" type="video/mp4">
 </video>
+
+# Quick start
+
+* [Install](introduction/installation.md) in your system
+* [Run](running/README.md) `xrdebug`
+
+A client library will provide `xr` [helpers](helpers/README.md) to debug your code.
+
+* [PHP](clients/php.md)
+
+To contribute a client library check the [developer guide]() and our [API](developer/api.md).
