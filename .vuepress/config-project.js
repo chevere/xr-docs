@@ -4,7 +4,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: '/logo.svg'
+            href: '/logo.png'
         }],
         ['meta', {
             name: 'theme-color',
@@ -20,16 +20,7 @@ module.exports = {
         }],
         ['link', {
             rel: 'apple-touch-icon',
-            href: '/logo.svg'
-        }],
-        ['link', {
-            rel: 'mask-icon',
-            href: '/logo.svg',
-            color: '#3eaf7c'
-        }],
-        ['meta', {
-            name: 'msapplication-TileImage',
-            content: '/logo.svg'
+            href: '/logo.png'
         }],
         ['meta', {
             name: 'msapplication-TileColor',
@@ -40,7 +31,7 @@ module.exports = {
         logo: '/logo.svg',
         pwa: false,
         repo: 'chevere/xrdebug',
-        docsRepo: 'chevere/xr-docs',
+        docsRepo: 'chevere/xrdebug-docs',
         docsBranch: 'main',
         smoothScroll: true,
         editLinks: true,
