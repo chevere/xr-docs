@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'get-started.md',
-    'why-xr.md',
+    'introduction.md',
     'installation.md',
     'contributing.md',
 ];

@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # Client library guide
 
 A client library for xrDebug is easy to implement as any HTTP API. Client libraries are HTTP wrappers for interacting with xrDebug, making the configuration and usage more trivial to end-users.
