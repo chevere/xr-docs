@@ -22,14 +22,5 @@ There are other [helper functions](../helpers/README.md) that allow you to show 
 
 ## How it works?
 
-* An HTTP web server is in charge of listening to messages emitted from your code.
-* You can [configure](../configuration/README.md) the server where your code stream messages to.
-* Calls to `xr()` [helpers](../helpers/README.md) in your code emit a message to the configured xrDebug server.
-
-xrDebug receives any variable introspection using helpers in your code and then these messages are streamed in the web interface of xrDebug server.
-
-## Does it work with X?
-
-xrDebug works with anything as it is a language-agnostic dump debug server. It is portable, distributed as a self-executable binary with also source and `.phar` file distribution.
-
-You can use it in your framework, CMS or custom application. You are encouraged to [contribute](contributing.md) with vendor-specific support to make xrDebug more context-aware.
+* xrDebug listens to messages emitted from your code.
+* Calls to xrDebug helpers in your code emit a message to server.
