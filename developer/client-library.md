@@ -1,6 +1,6 @@
-# Client library
+# Client library guide
 
-A client library enables to interact with xrDebug from anywhere you can send HTTP requests.
+A client library for xrDebug is easy to implement as any HTTP API. Client libraries are HTTP wrappers for interacting with xrDebug, making the configuration and usage more trivial to end-users.
 
 ## Message
 
