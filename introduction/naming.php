@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'README.md' => 'Intro',
-    'why-xr.md' => 'Why xrDebug?',
+    'README.md' => 'Introduction',
     'installation.md' => 'Installation',
     'contributing.md' => 'Contributing',
 ];
