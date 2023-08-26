@@ -61,3 +61,11 @@ function isPaused($id): bool
     return true;
 }
 ```
+
+## Singing requests
+
+`🚧 Work in progress`
+
+## End-to-end encryption
+
+`🚧 Work in progress`
