@@ -23,8 +23,7 @@ footer: Made by Rodolfo Berrios
 
 * [Install](introduction/installation.md) server software
 * [Run](running/README.md) `xrdebug` on your terminal
-
-Client libraries provide `xr` [helpers](helpers/README.md) to debug your code.
+* Install a client library for your language.
 
 | Language | Package                                                 |
 | -------- | ------------------------------------------------------- |
