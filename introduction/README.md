@@ -2,7 +2,7 @@
 
 ## What is xrDebug?
 
-xrDebug is a dump debug utility providing an [application server](../running/README.md) where you can send debug payloads, and stream these messages to multiple peers in any web browser.
+xrDebug is a dump debug utility providing an application server where you can send debug payloads, and stream these messages to multiple peers in any web browser.
 
 Here's, this is what you write in your code (from the [PHP client](https://github.com/chevere/xr)):
 

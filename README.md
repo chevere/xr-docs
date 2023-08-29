@@ -22,11 +22,11 @@ footer: Made by Rodolfo Berrios
 # Quick start
 
 * [Install](introduction/installation.md) server software
-* [Run](running/README.md) `xrdebug` on your terminal
+* [Run](run/README.md) `xrdebug` on your terminal
 * Install a client library for your language.
 
 | Language | Package                                                 |
 | -------- | ------------------------------------------------------- |
 | PHP      | [chevere/xr](https://packagist.org/packages/chevere/xr) |
 
-To contribute a client library check the [client library guide](developer/client-library.md) and our [API](developer/api.md).
+To contribute a client library check the [developer guide](developer/) and our [API](/api).

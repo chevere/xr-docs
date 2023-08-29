@@ -4,6 +4,6 @@ return [
     'README.md',
     'introduction/',
     'configuration/',
-    'running/',
+    'run/',
     'developer/',
 ];

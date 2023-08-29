@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'introduction.md',
+    'README.md',
     'installation.md',
     'contributing.md',
 ];

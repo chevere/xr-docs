@@ -2,7 +2,7 @@
 sidebar: false
 ---
 
-# Running
+# Run
 
 To run xrDebug execute:
 

@@ -1,6 +1,6 @@
 # Installation
 
-## Self-executable binary (recommended)
+## Self-executable binary <Badge text="recommended"/>
 
 Download latest `xrdebug` binary from [releases](https://github.com/chevere/xrdebug/releases).
 

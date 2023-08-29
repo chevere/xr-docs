@@ -1,10 +1,10 @@
 # API
 
-The xrDebug API standard defines a language-agnostic web service where any compatible client library can implement [xr helpers](../helpers/README.md) in their own language.
+xrDebug API standard defines a language-agnostic web service where any compatible client library can implement xr helpers in their own language/context.
 
 Following examples use [curl](https://curl.se/) to issue HTTP requests to xrDebug API.
 
-## Create a debug message
+## Create debug message
 
 `POST /messages`
 
@@ -20,7 +20,7 @@ curl --fail -X POST \
     http://127.0.0.1:27420/messages
 ```
 
-## Create a pause
+## Create pause
 
 `POST /pauses`
 
@@ -34,7 +34,7 @@ curl --fail -X POST \
     http://127.0.0.1:27420/pauses
 ```
 
-## Get a pause
+## Get pause
 
 `GET /pauses/{id}`
 
@@ -45,7 +45,7 @@ curl --fail -X GET \
     http://127.0.0.1:27420/pauses/b1cabc9a-145f-11ee-be56-0242ac120002
 ```
 
-## Delete a pause
+## Delete pause
 
 `DELETE /pauses/{id}`
 
@@ -56,7 +56,7 @@ curl --fail -X DELETE \
     http://127.0.0.1:27420/pauses/b1cabc9a-145f-11ee-be56-0242ac120002
 ```
 
-## Update a pause (stop execution)
+## Update pause (stop execution)
 
 `PATCH /pauses/{id}`
 
@@ -90,7 +90,7 @@ curl --fail -X POST \
     http://127.0.0.1:27420/messages
 ```
 
-## API Specification
+## API specification
 
 xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing the HTTP API standard.
 

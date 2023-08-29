@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'running.md',
+    'run.md',
 ];
