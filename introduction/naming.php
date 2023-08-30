@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'README.md' => 'Introduction',
+    'README.md' => 'Get started',
     'installation.md' => 'Installation',
     'contributing.md' => 'Contributing',
 ];
