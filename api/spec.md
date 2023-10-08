@@ -1,10 +1,11 @@
 # Specification
 
-xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing its HTTP API.
+xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing its HTTP API. The [schwager.json](https://github.com/chevere/xrdebug/releases/latest/download/schwager.json) file is available since `1.0`.
 
 * All parameters required except if `required: false`
 
 ```json
+{
 {
     "api": "xr",
     "name": "xrDebug API",
@@ -25,6 +26,9 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
                         "200": [
                             {
                                 "context": "SPAController",
+                                "headers": [
+                                    "Content-Type: text\/html"
+                                ],
                                 "body": {
                                     "type": "string",
                                     "regex": "^.*$\/m"
@@ -41,33 +45,38 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
             "endpoints": {
                 "POST": {
                     "description": "Create a debug message",
-                    "body": {
-                        "type": "array#map",
-                        "parameters": {
-                            "body": {
-                                "required": false,
-                                "type": "string",
-                                "regex": ".*?"
-                            },
-                            "emote": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "file_line": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "file_path": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "id": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "topic": {
-                                "required": false,
-                                "type": "string"
+                    "request": {
+                        "headers": [
+                            "Content-Type: application\/json"
+                        ],
+                        "body": {
+                            "type": "array#map",
+                            "parameters": {
+                                "body": {
+                                    "required": false,
+                                    "type": "string",
+                                    "regex": ".*?"
+                                },
+                                "emote": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "file_line": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "file_path": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "id": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "topic": {
+                                    "required": false,
+                                    "type": "string"
+                                }
                             }
                         }
                     },
@@ -78,6 +87,11 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
                                 "body": {
                                     "type": "null"
                                 }
+                            }
+                        ],
+                        "400": [
+                            {
+                                "context": "VerifySignatureMiddleware"
                             }
                         ]
                     }
@@ -90,33 +104,38 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
             "endpoints": {
                 "POST": {
                     "description": "Create a pause",
-                    "body": {
-                        "type": "array#map",
-                        "parameters": {
-                            "id": {
-                                "type": "string",
-                                "regex": "^[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}$"
-                            },
-                            "body": {
-                                "required": false,
-                                "type": "string",
-                                "regex": ".*?"
-                            },
-                            "emote": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "file_line": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "file_path": {
-                                "required": false,
-                                "type": "string"
-                            },
-                            "topic": {
-                                "required": false,
-                                "type": "string"
+                    "request": {
+                        "headers": [
+                            "Content-Type: application\/json"
+                        ],
+                        "body": {
+                            "type": "array#map",
+                            "parameters": {
+                                "id": {
+                                    "type": "string",
+                                    "regex": "^[0-9a-fA-F]{8}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{4}\\b-[0-9a-fA-F]{12}$"
+                                },
+                                "body": {
+                                    "required": false,
+                                    "type": "string",
+                                    "regex": ".*?"
+                                },
+                                "emote": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "file_line": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "file_path": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "topic": {
+                                    "required": false,
+                                    "type": "string"
+                                }
                             }
                         }
                     },
@@ -124,17 +143,22 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
                         "201": [
                             {
                                 "context": "PausePostController",
+                                "headers": [
+                                    "Content-Type: application\/json"
+                                ],
                                 "body": {
                                     "type": "array#map",
                                     "parameters": {
-                                        "pause": {
-                                            "type": "boolean"
-                                        },
                                         "stop": {
                                             "type": "boolean"
                                         }
                                     }
                                 }
+                            }
+                        ],
+                        "400": [
+                            {
+                                "context": "VerifySignatureMiddleware"
                             }
                         ]
                     }
@@ -156,7 +180,10 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
                     "responses": {
                         "204": [
                             {
-                                "context": "PauseDeleteController"
+                                "context": "PauseDeleteController",
+                                "body": {
+                                    "type": "null"
+                                }
                             }
                         ],
                         "404": [
@@ -172,17 +199,22 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
                         "200": [
                             {
                                 "context": "PauseGetController",
+                                "headers": [
+                                    "Content-Type: application\/json"
+                                ],
                                 "body": {
                                     "type": "array#map",
                                     "parameters": {
-                                        "pause": {
-                                            "type": "boolean"
-                                        },
                                         "stop": {
                                             "type": "boolean"
                                         }
                                     }
                                 }
+                            }
+                        ],
+                        "400": [
+                            {
+                                "context": "VerifySignatureMiddleware"
                             }
                         ],
                         "404": [
@@ -198,12 +230,12 @@ xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describi
                         "200": [
                             {
                                 "context": "PausePatchController",
+                                "headers": [
+                                    "Content-Type: application\/json"
+                                ],
                                 "body": {
                                     "type": "array#map",
                                     "parameters": {
-                                        "pause": {
-                                            "type": "boolean"
-                                        },
                                         "stop": {
                                             "type": "boolean"
                                         }
