@@ -17,7 +17,7 @@ Apache 2.0 Licensed | Copyright © 2023-present [Rodolfo Berrios](https://rodolf
 
 # Quick start
 
-* [Install](introduction/installation.md) server software
+* [Install](/install) server software
 * [Run](run/README.md) `xrdebug` on your terminal
 * Install a client library for your language
 
