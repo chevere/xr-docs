@@ -33,8 +33,17 @@ module.exports = {
         repo: 'chevere/xrdebug',
         docsRepo: 'chevere/xrdebug-docs',
         docsBranch: 'main',
-        smoothScroll: true,
+        smoothScroll: false,
         editLinks: true,
-        lastUpdated: true
+        lastUpdated: true,
+        nav_after: [
+            {
+              text: 'Library',
+              ariaLabel: 'Library Menu',
+              items: [
+                { text: 'PHP', link: 'https://github.com/chevere/xr' },
+              ]
+            }
+          ]
     },
 };

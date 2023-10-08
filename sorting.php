@@ -2,8 +2,8 @@
 
 return [
     'README.md',
-    'introduction/',
-    'configuration/',
+    'install/',
     'run/',
+    'Library',
     'developer/',
 ];

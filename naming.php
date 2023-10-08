@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'introduction/' => 'Intro',
+    'install/' => 'Install',
     'run/' => 'Run',
     'api/' => 'API',
     'dev/' => 'Developer',
