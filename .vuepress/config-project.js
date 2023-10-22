@@ -1,6 +1,6 @@
 module.exports = {
     title: 'xrDebug',
-    description: 'Lightweight debug utility',
+    description: 'Lightweight portable debug utility',
     head: [
         ['link', {
             rel: 'icon',
@@ -31,7 +31,7 @@ module.exports = {
         logo: '/logo.svg',
         pwa: false,
         repo: 'xrdebug/xrdebug',
-        docsRepo: 'xrdebug/xrdebug-docs',
+        docsRepo: 'xrdebug/docs',
         docsBranch: 'main',
         smoothScroll: false,
         editLinks: true,
