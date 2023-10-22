@@ -30,8 +30,8 @@ module.exports = {
     themeConfig: {
         logo: '/logo.svg',
         pwa: false,
-        repo: 'chevere/xrdebug',
-        docsRepo: 'chevere/xrdebug-docs',
+        repo: 'xrdebug/xrdebug',
+        docsRepo: 'xrdebug/xrdebug-docs',
         docsBranch: 'main',
         smoothScroll: false,
         editLinks: true,
@@ -41,7 +41,7 @@ module.exports = {
               text: 'Library',
               ariaLabel: 'Library Menu',
               items: [
-                { text: 'PHP', link: 'https://github.com/chevere/xr' },
+                { text: 'PHP', link: 'https://github.com/xrdebug/php' },
               ]
             }
           ]

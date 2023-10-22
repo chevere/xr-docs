@@ -1,6 +1,6 @@
 # Specification
 
-xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing its HTTP API. The [schwager.json](https://github.com/chevere/xrdebug/releases/latest/download/schwager.json) file is available since `1.0`.
+xrDebug uses [Schwager](https://chevere.org/packages/schwager.html) for describing its HTTP API. The [schwager.json](https://github.com/xrdebug/xrdebug/releases/latest/download/schwager.json) file is available since `1.0`.
 
 * All parameters required except if `required: false`
 

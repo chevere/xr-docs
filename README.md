@@ -8,23 +8,25 @@ actionLink: /install/
 ---
 
 ::: slot footer
-Apache 2.0 Licensed | Copyright © 2023-present [Rodolfo Berrios](https://rodolfoberrios.com)
+Apache 2.0 Licensed | Copyright © [Rodolfo Berrios](https://rodolfoberrios.com)
 :::
-
-<video width="100%" poster="./src/social/github.jpg" controls>
-    <source src="./src/video/cremino.mp4" type="video/mp4">
-</video>
 
 # Quick start
 
-* [Install](/install) server software
-* [Run](run/README.md) `xrdebug` on your terminal
+* [Install](/install) command
+* [Run](run/README.md) `xrdebug`
 * Install a client library for your language
+
+## Demo
+
+<video width="100%" poster="./src/social/xrdebug-social.png" controls>
+    <source src="./src/video/cremino.mp4" type="video/mp4">
+</video>
 
 ## Client libraries
 
-| Language | Package                                                 |
-| -------- | ------------------------------------------------------- |
-| PHP      | [chevere/xr](https://packagist.org/packages/chevere/xr) |
-
 👍 To contribute a client library check the [developer guide](/developer) and the [API](/api).
+
+| Language                                                  | Package                                                   |
+| --------------------------------------------------------- | --------------------------------------------------------- |
+| <img src="./src/tech/php.svg" alt="drawing" width="140"/> | [xrdebug/php](https://packagist.org/packages/xrdebug/php) |
