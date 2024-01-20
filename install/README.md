@@ -1,10 +1,14 @@
 # Installation
 
+xrDebug is available as a self-contained binary, PHAR file, Composer package, Docker image, and source code. See [run](../run/README.md) for instructions on how to run the software.
+
 ## Self-contained binary <Badge text="recommended"/>
 
 Download latest `xrdebug` binary for your operating system and CPU architecture.
 
 ### macOS
+
+xrDebug package for macOS includes a GUI install wizard. Open the `.pkg` file to start the installation.
 
 | CPU     | Download                                                                                                         |
 | ------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +35,9 @@ open xrdebug-macos-x86_64.pkg
 </code-group>
 :::
 
-### Linux
+### Linux & Windows WSL
+
+Download the `.tar.gz` file for your CPU architecture and extract it to a directory in your `PATH`.
 
 | CPU     | Download                                                                                                                 |
 | ------- | ------------------------------------------------------------------------------------------------------------------------ |

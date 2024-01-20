@@ -4,13 +4,23 @@ sidebar: false
 
 # Run
 
-To run xrDebug execute:
+To run xrDebug execute from terminal:
 
+<code-group>
+<code-block title="macOS/Linux">
 ```sh
 xrdebug <options>
 ```
+</code-block>
 
-> (*) Command location may vary depending on your [installation](../introduction/installation.md).
+<code-block title="Windows">
+```sh
+wsl ./xrdebug <options>
+```
+</code-block>
+</code-group>
+
+> (*) Where `xrdebug` and `./xrdebug` reflect the path to the executable file from [install](../install/).
 
 ## Options
 
