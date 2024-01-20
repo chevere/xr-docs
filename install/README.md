@@ -1,3 +1,7 @@
+---
+sidebarDepth: 2
+---
+
 # Installation
 
 xrDebug is available as a self-contained binary, PHAR file, Composer package, Docker image, and source code. See [run](../run/README.md) for instructions on how to run the software.
