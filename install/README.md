@@ -6,7 +6,17 @@ sidebarDepth: 2
 
 xrDebug is available as a self-contained binary, PHAR file, Composer package, Docker image, and source code. See [run](../run/README.md) for instructions on how to run the software.
 
+xrDebug is available for macOS, Linux, and Windows WSL.
+
 ## Self-contained binary <Badge text="recommended"/>
+
+Download latest `xrdebug` binary by running the following command in your terminal, it detects your operating system and CPU architecture:
+
+```sh
+bash <(curl -sL xrdebug.com/bin.sh)
+```
+
+## Self-contained binary (manual)
 
 Download latest `xrdebug` binary for your operating system and CPU architecture.
 
