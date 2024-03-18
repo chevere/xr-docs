@@ -22,23 +22,42 @@ wsl ./xrdebug <options>
 
 > (*) Where `xrdebug` and `./xrdebug` reflect the path to the executable file from [install](../install/).
 
-## Options
+## Server options
 
 | Option | Description                             |
 | ------ | --------------------------------------- |
 | -p     | Port [use 0 for random] (default 27420) |
-| -n     | Session name (default xrDebug)          |
-| -e     | Enable end-to-end encryption            |
-| -x     | Enable sign verification                |
-| -w     | Working directory (default temp dir)    |
-| -c     | Cert file for TLS                       |
-| -k     | [for -e option] Symmetric key           |
-| -s     | [for -x option] Private key             |
-| -i     | Editor (default vscode)                 |
+| -a     | IP address (default 0.0.0.0)            |
+| -c     | Cert file for TLS [PEM: local_cert]     |
+| -z     | Private key for TLS [PEM: local_pk]     |
+
+## Cipher options
+
+| Option | Description                   |
+| ------ | ----------------------------- |
+| -e     | Enable end-to-end encryption  |
+| -k     | [for -e option] Symmetric key |
+| -s     | Enable sign verification      |
+| -x     | [for -x option] Private key   |
+
+## Session options
+
+| Option | Description                          |
+| ------ | ------------------------------------ |
+| -n     | Session name (default xrDebug)       |
+| -w     | Working directory (default temp dir) |
+
+## IDE options
+
+Supported editors: atom emacs espresso idea macvim netbeans phpstorm sublime textmate vscode
+
+| Option | Description             |
+| ------ | ----------------------- |
+| -i     | Editor (default vscode) |
 
 ## Help
 
-Pass `--help` to show help information.
+Pass `-h` or `--help` to show help information.
 
 ```sh
 xrdebug --help
