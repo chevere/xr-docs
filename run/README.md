@@ -4,7 +4,7 @@ sidebar: false
 
 # Run
 
-To run xrDebug execute from terminal:
+To run xrDebug web server execute from terminal:
 
 <code-group>
 <code-block title="macOS/Linux">

@@ -14,7 +14,7 @@ Apache 2.0 Licensed | Copyright © [Rodolfo Berrios](https://rodolfoberrios.com)
 # Quick start
 
 * [Install](/install) command
-* [Run](run/README.md) `xrdebug`
+* [Run](run/README.md) `xrdebug` to spawn web server
 * Install a client library for your language
 
 ## Demo
