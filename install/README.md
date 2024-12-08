@@ -10,7 +10,7 @@ xrDebug is available for macOS, Linux, and Windows WSL. Access to the [latest re
 
 ## Self-contained binary <Badge text="recommended"/>
 
-Download latest `xrdebug` binary by running the following command in your terminal, it detects your operating system and CPU architecture:
+Download latest `xrdebug` binary by running the following command in your terminal, it detects your operating system and CPU architecture (macOS/Linux) and installs the binary at `/usr/local/bin`:
 
 ```sh
 bash <(curl -sL xrdebug.com/bin.sh)
@@ -22,12 +22,12 @@ Download latest `xrdebug` binary for your operating system and CPU architecture.
 
 ### macOS
 
-xrDebug package for macOS includes a GUI install wizard. Open the `.pkg` file to start the installation.
+Download the `.tar.gz` file for your CPU architecture and extract it to a directory in your `PATH`.
 
-| CPU     | Download                                                                                                         |
-| ------- | ---------------------------------------------------------------------------------------------------------------- |
-| Silicon | [xrdebug-macos-arm64.pkg](https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-arm64.pkg)   |
-| Intel   | [xrdebug-macos-x86_64.pkg](https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-x86_64.pkg) |
+| CPU     | Download                                                                                                               |
+| ------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Silicon | [xrdebug-macos-arm64.tar.gz](https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-arm64.tar.gz)   |
+| Intel   | [xrdebug-macos-x86_64.tar.gz](https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-x86_64.tar.gz) |
 
 ::: details CLI instructions
 Run the following to install from your terminal:
@@ -35,15 +35,17 @@ Run the following to install from your terminal:
 <code-group>
 <code-block title="Silicon">
 ```sh
-curl -LO https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-arm64.pkg
-open xrdebug-macos-arm64.pkg
+curl -LO https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-arm64.tar.gz
+tar -xvf xrdebug-macos-arm64.tar.gz
+chmod +x xrdebug
 ```
 </code-block>
 
 <code-block title="Intel">
 ```sh
-curl -LO https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-x86_64.pkg
-open xrdebug-macos-x86_64.pkg
+curl -LO https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-macos-x86_64.tar.gz
+tar -xvf xrdebug-macos-x86_64.tar.gz
+chmod +x xrdebug
 ```
 </code-block>
 </code-group>
@@ -66,6 +68,7 @@ Run the following to install from your terminal:
 ```sh
 curl -LO https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-linux-aarch64.tar.gz
 tar -xvf xrdebug-linux-aarch64.tar.gz
+chmod +x xrdebug
 ```
 </code-block>
 
@@ -73,10 +76,19 @@ tar -xvf xrdebug-linux-aarch64.tar.gz
 ```sh
 curl -LO https://github.com/xrdebug/xrdebug/releases/latest/download/xrdebug-linux-x86_64.tar.gz
 tar -xvf xrdebug-linux-x86_64.tar.gz
+chmod +x xrdebug
 ```
 </code-block>
 </code-group>
 :::
+
+### Binary on PATH
+
+Run the following command to move the downloaded binary to a directory in your `PATH`:
+
+```sh
+mv xrdebug /usr/local/bin/xrdebug
+```
 
 ## PHAR
 
