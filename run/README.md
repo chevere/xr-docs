@@ -4,69 +4,55 @@ sidebar: false
 
 # Run
 
-To run xrDebug web server execute from terminal:
+To run xrDebug server execute from terminal:
 
-<code-group>
-<code-block title="macOS/Linux">
 ```sh
 xrdebug <options>
 ```
-</code-block>
 
-<code-block title="Windows">
-```sh
-wsl ./xrdebug <options>
-```
-</code-block>
-</code-group>
+> (*) Where `xrdebug` reflect the path to the executable file from [install](../install/).
 
-> (*) Where `xrdebug` and `./xrdebug` reflect the path to the executable file from [install](../install/).
+## Options
 
-## Server options
+- `-a`: IP address to listen on (default: ``)
+- `-p`: Port to listen on (use `0` for random, default: `27420`)
+- `-c`: Path to TLS certificate file
+- `-z`: Path to TLS private key
+- `-e`: Enable end-to-end encryption (default: `false`)
+- `-k`: (for `-e` option) Path to symmetric key (AES-GCM AE)
+- `-s`: Enable sign verification (default: `false`)
+- `-x`: (for `-s` option) Path to private key (ed25519)
+- `-n`: Session name (default: `xrDebug`)
+- `-i`: Editor to use (default: `vscode`, options: `atom`, `bracket`, `emacs`, `espresso`, `fleet`, `idea`, `macvim`, `netbeans`, `nova`, `phpstorm`, `sublime`, `textmate`, `vscode`, `zed`)
 
-| Option | Description                             |
-| ------ | --------------------------------------- |
-| -p     | Port [use 0 for random] (default 27420) |
-| -a     | IP address (default 0.0.0.0)            |
-| -c     | Cert file for TLS [PEM: local_cert]     |
-| -z     | Private key for TLS [PEM: local_pk]     |
+## Examples
 
-## Cipher options
+- Run server on port `12345`:
 
-| Option | Description                   |
-| ------ | ----------------------------- |
-| -e     | Enable end-to-end encryption  |
-| -k     | [for -e option] Symmetric key |
-| -s     | Enable sign verification      |
-| -x     | [for -x option] Private key   |
+  ```sh
+  xrdebug -p 12345
+  ```
 
-## Session options
+- Run server with end-to-end encryption:
 
-| Option | Description                          |
-| ------ | ------------------------------------ |
-| -n     | Session name (default xrDebug)       |
-| -w     | Working directory (default temp dir) |
+  ```sh
+  xrdebug -e -k private.key
+  ```
 
-## IDE options
+- Run server with sign verification:
 
-Supported editors: atom emacs espresso idea macvim netbeans phpstorm sublime textmate vscode
+  ```sh
+  xrdebug -s -x private.key
+  ```
 
-| Option | Description             |
-| ------ | ----------------------- |
-| -i     | Editor (default vscode) |
+- Run server with TLS:
 
-## Help
+  ```sh
+  xrdebug -c cert.pem -z key.pem
+  ```
 
-Pass `-h` or `--help` to show help information.
+- Run server with "My Session" name:
 
-```sh
-xrdebug --help
-```
-
-## Version
-
-Pass `--version` to show version information.
-
-```sh
-xrdebug --version
-```
+  ```sh
+  xrdebug -n "My Session"
+  ```
