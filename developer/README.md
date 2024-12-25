@@ -1,15 +1,25 @@
 ---
-sidebar: false
+sidebar: 3
 ---
 
 # Developer guide
 
-A client library for xrDebug is easy to implement as any HTTP API. Client libraries are HTTP wrappers for interacting with xrDebug, making the configuration and usage trivial to end-users.
+Implementing a client library for xrDebug is straightforward since it's based on standard HTTP APIs. Client libraries act as wrappers around these HTTP endpoints, providing a clean interface that simplifies configuration and usage for end-users.
+
+::: tip Welcome contributions
+If you have an idea for a client library in a language or technology not listed here, please reach out to us. Your contributions help make xrDebug better for everyone.
+:::
 
 ## Design considerations
 
-- The client software is responsible for formatting the debug information.
-- The "ID" field is used to identify messages and pauses. It should be unique for each message or pause, and it's up to the client to generate it.
+- Server doesn't enforce any specific message format and client software is responsible for formatting the debug information. It's recommended to use HTML for messages.
+- "ID" field is used to identify messages and pauses. It should be unique, and it's up to the client to generate it.
+
+Client software **only requires** to handle the following endpoints:
+
+- `POST /messages`
+- `POST /pauses`
+- `GET /pauses/{id}`
 
 ## Message
 

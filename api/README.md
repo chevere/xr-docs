@@ -6,9 +6,7 @@ sidebarDepth: 3
 
 The HTTP API provides a RESTful interface to the server. See the [openapi.yml](https://raw.githubusercontent.com/xrdebug/xrdebug/refs/heads/3.0/api/openapi.yml) file for alternative API documentation.
 
-## Endpoints
-
-### GET /
+## GET /
 
 To access the web interface, open a web browser and navigate to the server's root URL. The server will serve the web interface.
 
@@ -16,7 +14,7 @@ To access the web interface, open a web browser and navigate to the server's roo
 open http://localhost:27420
 ```
 
-### POST /messages
+## POST /messages
 
 Sends a message to the server.
 
@@ -44,7 +42,7 @@ curl --fail -X POST \
     http://localhost:27420/messages
 ```
 
-### POST /pauses
+## POST /pauses
 
 Creates a pause lock.
 
@@ -69,7 +67,7 @@ The following parameters are optional:
 curl --fail -X POST --data "id=123" http://localhost:27420/pauses
 ```
 
-### GET /pauses/{id}
+## GET /pauses/{id}
 
 Retrieves the status of an existing pause lock.
 
@@ -86,7 +84,7 @@ Retrieves the status of an existing pause lock.
 curl --fail -X GET http://localhost:27420/pauses/123
 ```
 
-### DELETE /pauses/{id}
+## DELETE /pauses/{id}
 
 Deletes a pause lock.
 
@@ -103,7 +101,7 @@ Deletes a pause lock.
 curl --fail -X DELETE http://localhost:27420/pauses/123
 ```
 
-### PATCH /pauses/{id}
+## PATCH /pauses/{id}
 
 Updates a pause lock status to `stop: true`.
 
@@ -120,7 +118,7 @@ Updates a pause lock status to `stop: true`.
 curl --fail -X PATCH http://localhost:27420/pauses/123
 ```
 
-### GET /stream
+## GET /stream
 
 Establishes a Server-Sent Events (SSE) connection.
 
