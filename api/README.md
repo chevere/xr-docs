@@ -1,91 +1,133 @@
+---
+sidebarDepth: 3
+---
+
 # HTTP API
 
-xrDebug HTTP API standard defines a language-agnostic web service as variable introspection is generated on client-side.
+The HTTP API provides a RESTful interface to the server. See the [openapi.yml](https://raw.githubusercontent.com/xrdebug/xrdebug/refs/heads/3.0/api/openapi.yml) file for alternative API documentation.
 
-Following examples use [curl](https://curl.se/) to issue HTTP requests to xrDebug API.
+## Endpoints
 
-## Create debug message
+### GET /
 
-`POST /messages`
+To access the web interface, open a web browser and navigate to the server's root URL. The server will serve the web interface.
 
-When creating a debug message it will be streamed to xrDebug window.
+```sh
+open http://localhost:27420
+```
 
-All parameters are optional: `body`, `emote`, `file_line`, `file_path`, `id`, `topic` (but at least one is required).
+### POST /messages
+
+Sends a message to the server.
+
+**Parameters:**
+
+All parameters are optional, but at least one is required.
+
+- `body`: The message body.
+- `emote`: The message type (default: `info`).
+- `file_line`: The line number.
+- `file_path`: The file path.
+- `id`: The message ID.
+- `topic`: The message topic.
+
+**Responses:**
+
+- `200 OK`: Message sent.
+- `400 Bad Request`: Invalid request.
 
 ```sh
 curl --fail -X POST \
     --data "body=My message" \
     --data "file_path=file" \
     --data "file_line=1" \
-    http://127.0.0.1:27420/messages
+    http://localhost:27420/messages
 ```
 
-## Create pause
+### POST /pauses
 
-`POST /pauses`
+Creates a pause lock.
 
-When creating a pause, a lock for the given id will be created. When the helper sends `xri()->pause()` the debugger creates a lock with `{"stop":false}` contents.
+**Parameters:**
 
-Requires `id`, supports optional body fields: `body`, `emote`, `file_line`, `file_path`, `topic`.
+- `id`: The ID of the pause lock.
+
+The following parameters are optional:
+
+- `body`: The message body.
+- `emote`: The message type (default: `info`).
+- `file_line`: The line number.
+- `file_path`: The file path.
+- `topic`: The message topic
+
+**Responses:**
+
+- `201 Created`: Lock created `Location: /pauses/{id}`.
+- `409 Conflict`: Lock already exists.
 
 ```sh
-curl --fail -X POST \
-    --data "id=b1cabc9a-145f-11ee-be56-0242ac120002" \
-    http://127.0.0.1:27420/pauses
+curl --fail -X POST --data "id=123" http://localhost:27420/pauses
 ```
 
-## Get pause
+### GET /pauses/{id}
 
-`GET /pauses/{id}`
+Retrieves the status of an existing pause lock.
 
-If a pause exists it means that execution is paused for the given id. The helper which called `xri()->pause()` should sleep/wait while the pause exists. If pause contents are `{"stop":false}` the id is paused, if contents are `{"stop":true}` the id is stopped.
+**Parameters:**
+
+- `id` (path): The ID of the pause lock.
+
+**Responses:**
+
+- `200 OK`: Returns the pause lock (JSON).
+- `404 Not Found`: Lock not found.
 
 ```sh
-curl --fail -X GET \
-    http://127.0.0.1:27420/pauses/b1cabc9a-145f-11ee-be56-0242ac120002
+curl --fail -X GET http://localhost:27420/pauses/123
 ```
 
-## Delete pause
+### DELETE /pauses/{id}
 
-`DELETE /pauses/{id}`
+Deletes a pause lock.
 
-When deleting a pause the lock previously created will be removed, which will enable client library to continue code execution.
+**Parameters:**
+
+- `id` (path): The ID of the pause lock.
+
+**Responses:**
+
+- `204 No Content`: Lock deleted.
+- `404 Not Found`: Lock not found.
 
 ```sh
-curl --fail -X DELETE \
-    http://127.0.0.1:27420/pauses/b1cabc9a-145f-11ee-be56-0242ac120002
+curl --fail -X DELETE http://localhost:27420/pauses/123
 ```
 
-## Update pause (stop execution)
+### PATCH /pauses/{id}
 
-`PATCH /pauses/{id}`
+Updates a pause lock status to `stop: true`.
 
-When updating a pause it will update the pause to a full stop. GET requests will return `{"stop":true}`. The helper which called `xri()->pause()` should stop execution once the pause was updated to stop code execution.
+**Parameters:**
+
+- `id` (path): The ID of the pause lock.
+
+**Responses:**
+
+- `200 OK`: Lock updated, returns the pause lock (JSON).
+- `404 Not Found`: Lock not found.
 
 ```sh
-curl --fail -X PATCH \
-    http://127.0.0.1:27420/pauses/b1cabc9a-145f-11ee-be56-0242ac120002
+curl --fail -X PATCH http://localhost:27420/pauses/123
 ```
 
-## Request signing
+### GET /stream
 
-When using sign verification (`-v` option) requests must add the `X-Signature` header.
+Establishes a Server-Sent Events (SSE) connection.
 
-First, sign the data fields:
+**Responses:**
 
-```php
-$serialize = serialize($data);
-$sign = $privateKey->sign($serialize);
-$signature = base64_encode($sign);
-```
-
-Then pass the signature header:
+- `200 OK`: Returns the SSE stream.
 
 ```sh
-curl --fail -X POST \
-    --data "body=My signed message" \
-    --data "file_path=file" \
-    --data "file_line=1" \
-    -H "X-Signature: <signature>" \
-    http://127.0.0.1:27420/messages
+curl --fail -X GET http://localhost:27420/stream
 ```

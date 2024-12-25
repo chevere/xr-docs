@@ -2,5 +2,4 @@
 
 return [
     'README.md',
-    'spec.md'
 ];
