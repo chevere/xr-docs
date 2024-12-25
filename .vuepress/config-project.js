@@ -42,6 +42,7 @@ module.exports = {
               ariaLabel: 'Library Menu',
               items: [
                 { text: 'PHP', link: 'https://github.com/xrdebug/php' },
+                { text: 'WordPress', link: 'https://github.com/xrdebug/wordpress'}
               ]
             }
           ]
