@@ -16,7 +16,7 @@ Apache 2.0 Licensed | Copyright © [Rodolfo Berrios](https://rodolfoberrios.com)
 
 [xrDebug](https://xrdebug.com/) is a lightweight web-based debug software. [Play video](https://xrdebug.com/xrdebug.mp4)
 
-## Installing
+## Quick start
 
 * [Install](/install) application (binary)
 
