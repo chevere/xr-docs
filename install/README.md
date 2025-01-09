@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 xrDebug is available for Windows, macOS, Linux and FreeBSD. Download the latest xrdebug binary from the [releases page](https://github.com/xrdebug/xrdebug/releases/latest).
 
-## From binary
+## Binary install
 
 1. Go to the [releases page](https://github.com/xrdebug/xrdebug/releases/latest).
 2. Download the appropriate binary for your operating system.
@@ -19,7 +19,7 @@ Optionally, you can run this command to install the latest version:
 bash <(curl -sL xrdebug.com/bin.sh)
 ```
 
-## From source
+## Install from source
 
 Ensure you have [Go](https://golang.org/dl/) installed.
 
@@ -27,12 +27,12 @@ Ensure you have [Go](https://golang.org/dl/) installed.
 go install github.com/xrdebug/xrdebug@latest
 ```
 
-## Docker
+## Docker image
 
 Container images are available at [ghcr.io/xrdebug/xrdebug](https://github.com/xrdebug/xrdebug/pkgs/container/xrdebug).
 
-Run the following command to start the server at port `27420`:
-
 ```sh
-docker run -t --init --rm --pull=always -p 27420:27420 ghcr.io/xrdebug/xrdebug:latest
+docker pull ghcr.io/xrdebug/xrdebug:latest
 ```
+
+See [Run > Docker](../run/README.md#docker) for the `docker run` command.

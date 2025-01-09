@@ -16,9 +16,9 @@ Apache 2.0 Licensed | Copyright © [Rodolfo Berrios](https://rodolfoberrios.com)
 
 [xrDebug](https://xrdebug.com/) is a lightweight web-based debug software. [Play video](https://xrdebug.com/xrdebug.mp4)
 
-## Quick start
+## Installing
 
-* [Install](/install) server
+* [Install](/install) application (binary)
 
 ```sh
 bash <(curl -sL xrdebug.com/bin.sh)
@@ -30,15 +30,23 @@ bash <(curl -sL xrdebug.com/bin.sh)
 xrdebug
 ```
 
-* Install a client library for your language or use the [HTTP API](./api/) directly
+* Alternatively, run it with Docker (use `host.docker.internal` as the host)
 
-## Client libraries
+```sh
+docker run -t --init -p 27420:27420 ghcr.io/xrdebug/xrdebug:latest
+```
 
-A client library is a wrapper around the HTTP API.
+## Debugging
+
+* Install a client library for your language/framework or use the [HTTP API](./api/) directly
+
+### Client libraries
+
+A client library is a wrapper around the HTTP API and it enables to debug your application by using helpers in your codebase.
 
 | Technology | Package                                                   |
 | ---------- | --------------------------------------------------------- |
-| PHP        | [xrdebug/php](https://packagist.org/packages/xrdebug/php) |
+| PHP        | [xrdebug/php](https://github.com/xrdebug/php)             |
 | WordPress  | [xrdebug/wordpress](https://github.com/xrdebug/wordpress) |
 
 ## Contributing

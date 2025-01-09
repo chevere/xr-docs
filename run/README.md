@@ -4,13 +4,25 @@ sidebar: false
 
 # Run
 
-To run xrDebug server execute from terminal:
+## Binary
+
+To start xrDebug server run from terminal:
 
 ```sh
 xrdebug <options>
 ```
 
 > (*) Where `xrdebug` reflect the path to the executable file from [install](../install/).
+
+## Docker
+
+Run the following command to start the server at port `27420`:
+
+```sh
+docker run -t --init -p 27420:27420 ghcr.io/xrdebug/xrdebug:latest
+```
+
+> (*) Use `host.docker.internal` as the host in your xrDebug client configuration.
 
 ## Options
 
